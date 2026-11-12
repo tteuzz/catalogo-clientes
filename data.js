@@ -63,7 +63,7 @@ window.CATALOGO = {
                                         "#6F5034",
                                         "#E4BD68"
                                     ],
-                         "colorText":  "verde, marrom e dourado",
+                         "colorText":  "verde, marrom e amarelo",
                          "dims":  null,
                          "image":  "img/natal-arvore-minimalista.webp",
                          "createdAt":  1794332000005
