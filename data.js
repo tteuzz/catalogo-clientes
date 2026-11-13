@@ -83,7 +83,7 @@ window.CATALOGO = {
                                       203.6,
                                       9.6
                                   ],
-                         "image":  "img/natal-bandeja.webp",
+                         "image":  "img/natal-bandeja.jpg",
                          "createdAt":  1794332000010
                      },
                      {
