@@ -4,16 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Catálogo de Revenda 3D</title>
-<meta name="description" content="Produtos impressos em 3D para revenda: seu preço e o preço sugerido para Mercado Livre, Shopee e TikTok Shop.">
+<meta name="description" content="Peças de Natal impressas em 3D para revenda: seu preço e o preço sugerido para Mercado Livre, Shopee e TikTok Shop.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catálogo de Revenda · Decoração de Natal 3D">
+<meta property="og:description" content="Preço especial para revender peças de Natal impressas em 3D. Monte seu pedido e envie pelo WhatsApp.">
+<meta property="og:url" content="https://tteuzz.github.io/catalogo-clientes/">
+<meta property="og:image" content="https://tteuzz.github.io/catalogo-clientes/img/natal-kit-completo.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<script src="data.js?v=9"></script>
+
+<meta name="theme-color" content="#0E6E64">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
-<script src="data.js?v=8"></script>
 <style>
-/* Layout: catálogo de atacado — cabeçalho com contato, abas por coleção, grade de produtos, ficha em painel lateral com preços de revenda e botão de pedido */
 :root{
   --bg:#EEF0EC; --surface:#FAFBF8; --ink:#1B2220; --muted:#5D6862; --line:#D5DAD3; --soft:#E2E8E2;
-  --accent:#0E6E64; --accent-ink:#FFFFFF; --good:#1F7A3D; --bad:#B42318; --scrim:rgba(20,26,24,.45);
+  --accent:#0E6E64; --accent-ink:#FFFFFF; --good:#1F7A3D; --gold:#9A6400; --bad:#B42318; --scrim:rgba(20,26,24,.45);
   --wa:#1E8E4E; --wa-ink:#FFFFFF;
   --cat-red:#B8322A; --cat-green:#2E7D4F; --cat-gold:#B27A1E; --cat-blue:#3B5FA8; --cat-plum:#8A4A7A; --cat-teal:#0E6E64;
   --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
@@ -23,74 +32,107 @@
 }
 @media (prefers-color-scheme: dark){:root{
   --bg:#121715; --surface:#1A201E; --ink:#E6ECE8; --muted:#97A39C; --line:#2C3531; --soft:#222A27;
-  --accent:#3FB8A8; --accent-ink:#0B1412; --good:#5BC27F; --bad:#F2766B; --scrim:rgba(0,0,0,.6);
+  --accent:#3FB8A8; --accent-ink:#0B1412; --good:#5BC27F; --gold:#E0B05A; --bad:#F2766B; --scrim:rgba(0,0,0,.6);
   --wa:#2FB766; --wa-ink:#06140C;
   --cat-red:#E5736A; --cat-green:#5BC27F; --cat-gold:#D9A34A; --cat-blue:#8A9CE6; --cat-plum:#D788B7; --cat-teal:#3FB8A8;
   color-scheme:dark}}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{margin:0}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
-.wrap{max-width:1240px;margin:0 auto;padding-block:calc(env(safe-area-inset-top,0px) + 22px) calc(env(safe-area-inset-bottom,0px) + 56px);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:1240px;margin:0 auto;padding-block:calc(env(safe-area-inset-top,0px) + 22px) calc(env(safe-area-inset-bottom,0px) + 96px);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
 header.top{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap}
 h1{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,4vw,38px);line-height:1.05;margin:0;letter-spacing:-.02em}
 h1 span{color:var(--accent)}
 .sub{color:var(--muted);margin:6px 0 0;max-width:62ch}
-h3{font-family:var(--f-display);font-weight:600;font-size:15px;margin:0 0 8px}
-.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:600;font-size:14px;border-radius:8px;padding:9px 15px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;white-space:nowrap}
+h3{font-family:var(--f-display);font-weight:600;font-size:15px;margin:0 0 10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;font-size:14px;border-radius:8px;padding:9px 15px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;white-space:nowrap;min-height:40px}
 .btn.wa{background:var(--wa);border-color:var(--wa);color:var(--wa-ink)}
-.btn.lg{padding:12px 18px;font-size:15.5px;width:100%;justify-content:center}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.plain{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.btn.lg{padding:12px 18px;font-size:15.5px;width:100%}
 .btn svg{width:18px;height:18px;flex:none}
-.btn:focus-visible,.chip:focus-visible,.card:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 40%,transparent);outline-offset:2px}
+.btn:disabled{opacity:.5;cursor:default}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:2px}
 .how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-@media (max-width:760px){.how{grid-template-columns:minmax(0,1fr)}}
-.how div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px;color:var(--muted)}
-.how b{display:block;color:var(--ink);font-family:var(--f-display);font-size:15px;margin-bottom:2px}
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+@media (max-width:760px){.how{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:8px;margin-inline:-16px;padding-inline:16px;scrollbar-width:none}.how::-webkit-scrollbar{display:none}.how div{flex:0 0 78%;scroll-snap-align:start;padding:10px 12px;font-size:13.5px}}
+.how div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px;color:var(--muted);display:flex;gap:12px;align-items:flex-start}
+.how .n{flex:none;width:26px;height:26px;border-radius:50%;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-family:var(--f-display);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.how b{display:block;color:var(--ink);font-family:var(--f-display);font-size:15px;margin-bottom:1px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;min-height:38px}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .chip .dot{width:9px;height:9px;border-radius:50%}
-.chip .n{font-family:var(--f-mono);font-size:12px;opacity:.7}
+.chip .c{font-family:var(--f-mono);font-size:12px;opacity:.7}
+.sep{width:1px;height:24px;background:var(--line);margin:0 2px}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap}
-.search{flex:1;min-width:180px;max-width:360px;font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink)}
-select.sel{font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--ink)}
+.search{flex:1;min-width:180px;max-width:380px;font:inherit;font-size:16px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+select.sel{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
 @media (max-width:480px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;padding:0;transition:transform .12s,border-color .12s}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .12s,transform .12s}
 .card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.thumb{aspect-ratio:1/1;max-width:100%;background:var(--soft);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-open{all:unset;cursor:pointer;display:flex;flex-direction:column;flex:1;min-width:0}
+.card-open:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:-3px}
+.thumb{aspect-ratio:1/1;max-width:100%;background:var(--soft);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
 .thumb img{width:100%;height:100%;object-fit:cover}
-.card-body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.badge{position:absolute;top:8px;left:8px;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--gold);color:#fff;letter-spacing:.01em}
+@media (prefers-color-scheme: dark){.badge{color:#1B1405}}
+.badge.kit{background:var(--accent);color:var(--accent-ink)}
+.badge.save{top:auto;bottom:8px}
+.card-body{padding:10px 12px 10px;display:flex;flex-direction:column;gap:6px;min-width:0;flex:1}
 .card-name{font-weight:600;font-size:14.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-prices{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-top:1px solid var(--line);padding-top:6px}
+.swatches{display:flex;gap:3px;flex-wrap:wrap}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;border:1px solid var(--line)}
+.card-prices{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-top:1px solid var(--line);padding-top:6px;margin-top:auto}
+.card-prices.one{grid-template-columns:1fr}
+@media (max-width:480px){.card-prices{grid-template-columns:1fr}.card-prices>div:not(.main){display:flex;justify-content:space-between;align-items:baseline;gap:6px}.card-prices>div:not(.main) b{font-size:12.5px;color:var(--muted)}}
 .card-prices small{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .card-prices b{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
-.card-prices .you b{font-size:16px;color:var(--accent)}
+.card-prices .main b{font-size:17px;color:var(--accent)}
+.was{font-family:var(--f-mono);font-size:12px;color:var(--muted);text-decoration:line-through;margin-left:4px;font-weight:400}
+.card-actions{display:flex;gap:6px;padding:0 10px 10px}
+.card-actions .btn{flex:1;padding:7px 10px;font-size:13.5px;min-height:38px}
+.card-actions .btn.icon{flex:none;width:40px;padding:0}
+.stepper{display:flex;align-items:center;border:1px solid var(--accent);border-radius:8px;overflow:hidden;flex:1;min-height:38px}
+.stepper button{all:unset;cursor:pointer;width:38px;align-self:stretch;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;color:var(--accent)}
+.stepper button:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:-3px}
+.stepper span{flex:1;text-align:center;font-family:var(--f-mono);font-weight:600;font-size:14px}
 .empty{border:2px dashed var(--line);border-radius:12px;padding:30px 20px;text-align:center;color:var(--muted);grid-column:1/-1}
 .overlay{position:fixed;inset:0;background:var(--scrim);z-index:20;display:flex;justify-content:flex-end}
-.sheet{background:var(--bg);width:min(920px,100%);height:100%;overflow-y:auto;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
-.sheet-head{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;padding-block:calc(env(safe-area-inset-top,0px) + 12px) 12px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.sheet{background:var(--bg);width:min(920px,100%);height:100%;overflow-y:auto;overscroll-behavior:contain;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+.sheet.narrow{width:min(520px,100%)}
+.sheet-head{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;padding-block:calc(env(safe-area-inset-top,0px) + 10px) 10px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px))}
+.sheet-head .t{font-family:var(--f-display);font-weight:800;font-size:18px}
 .sheet-body{padding-block:18px calc(env(safe-area-inset-bottom,0px) + 40px);padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
-.x{font:inherit;font-size:22px;line-height:1;border:0;background:transparent;color:var(--muted);cursor:pointer;padding:4px 8px;border-radius:6px}
+.x{font:inherit;font-size:24px;line-height:1;border:0;background:transparent;color:var(--muted);cursor:pointer;padding:6px 10px;border-radius:6px;min-width:44px;min-height:44px}
+.head-actions{display:flex;gap:4px;align-items:center}
 .tag{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--soft)}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
-.hero{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:18px;align-items:start}
+.hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:20px;align-items:start}
 @media (max-width:720px){.hero{grid-template-columns:minmax(0,1fr)}}
 .hero .thumb{border-radius:10px;border:1px solid var(--line)}
 .hero-info{display:flex;flex-direction:column;gap:12px;min-width:0}
 .prod-name{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,30px);line-height:1.1;letter-spacing:-.015em;margin:0;text-wrap:balance}
-.yourprice{border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));background:color-mix(in srgb,var(--accent) 7%,var(--surface));border-radius:10px;padding:12px 14px}
-.yourprice small{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.pricebox{border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));background:color-mix(in srgb,var(--accent) 7%,var(--surface));border-radius:10px;padding:12px 14px}
+.pricebox small{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
 .big{font-family:var(--f-display);font-weight:800;font-size:36px;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:4px}
 .big span{font-size:.45em;color:var(--muted);font-weight:600}
+.savenote{margin-top:6px;font-size:13.5px;color:var(--gold);font-weight:600}
+.buyrow{display:flex;gap:8px}
+.buyrow .stepper{flex:0 0 132px;min-height:46px}
+.buyrow .btn{flex:1;min-height:46px}
 .desc{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14.5px;margin:0}
 .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
 .kv div{background:var(--soft);border-radius:8px;padding:8px 10px;min-width:0}
 .kv small{display:block;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.kv b{font-family:var(--f-mono);font-weight:600;font-size:14px;overflow-wrap:anywhere}
-.sw{display:inline-block;width:11px;height:11px;border-radius:2px;border:1px solid var(--line);margin-right:3px;vertical-align:-1px}
+.kv b{font-weight:600;font-size:14px;overflow-wrap:anywhere}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.item{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:5px;font-size:13px;line-height:1.25;min-width:0}
+.item .thumb{border-radius:8px;border:1px solid var(--line)}
+.item small{color:var(--muted);font-family:var(--f-mono)}
 .tablewrap{overflow-x:auto}
-table.prices{border-collapse:collapse;width:100%;font-size:14px;min-width:460px}
+table.prices{border-collapse:collapse;width:100%;font-size:14px;min-width:440px}
 table.prices th,table.prices td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
 table.prices th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
 table.prices th:first-child,table.prices td:first-child{text-align:left;white-space:normal}
@@ -100,7 +142,25 @@ table.prices td:first-child small{display:block;font-weight:400;color:var(--mute
 table.prices td.price{font-family:var(--f-display);font-weight:800;font-size:18px}
 .pos{color:var(--good)}
 .note{font-size:12.5px;color:var(--muted);margin:10px 0 0}
-footer{color:var(--muted);font-size:13px;text-align:center;padding-top:10px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding-top:10px;display:flex;flex-direction:column;gap:6px;align-items:center}
+footer a{color:var(--accent)}
+/* barra do pedido */
+.bagbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:15;width:min(560px,calc(100% - 24px));display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);border-radius:14px;padding:8px 8px 8px 16px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.bagbar .info{flex:1;min-width:0;font-size:14px;line-height:1.25}
+.bagbar .info b{display:block;font-family:var(--f-display);font-size:17px}
+.bagbar .btn{min-height:44px}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:15;width:56px;height:56px;border-radius:50%;background:var(--wa);color:var(--wa-ink);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.25)}
+.fab svg{width:28px;height:28px}
+.bagitem{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.bagitem img{width:56px;height:56px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:var(--soft)}
+.bagitem .nm{font-weight:600;font-size:14px;line-height:1.25}
+.bagitem .pr{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.bagitem .stepper{min-height:36px;flex:none;width:112px}
+.bagitem .stepper button{width:34px}
+.total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--f-display);font-weight:800;font-size:22px;padding-top:4px}
+label.fl{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:var(--muted)}
+label.fl input,label.fl textarea{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;resize:vertical}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 86px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:8px;font-size:14px;z-index:60;box-shadow:0 6px 20px rgba(0,0,0,.2)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -108,22 +168,13 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding-top:10px}
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>Catálogo de <span>Revenda</span></h1>
-      <p class="sub">Peças impressas em 3D sob encomenda. Veja o seu preço e quanto cobrar em cada plataforma para ter lucro.</p>
+      <h1 id="h1"></h1>
+      <p class="sub" id="sub"></p>
     </div>
-    <a class="btn wa" id="waTop" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
-      Falar no WhatsApp
-    </a>
+    <a class="btn wa" id="waTop" target="_blank" rel="noopener"></a>
   </header>
-
-  <section class="how" aria-label="Como funciona">
-    <div><b>Seu preço</b>O valor que você paga por peça, já com acabamento e embalagem.</div>
-    <div><b>Preço sugerido</b>Quanto anunciar no Mercado Livre, Shopee e TikTok Shop, já cobrindo as taxas de cada uma.</div>
-    <div><b>Pedido</b>Escolha o produto e chame no WhatsApp para combinar quantidade, cores e prazo.</div>
-  </section>
-
-  <nav class="tabs" id="tabs" aria-label="Coleções"></nav>
+  <section class="how" id="how" aria-label="Como funciona"></section>
+  <nav class="filters" id="filters" aria-label="Filtros"></nav>
   <div class="toolbar">
     <input class="search" id="q" type="search" placeholder="Buscar produto" aria-label="Buscar produto">
     <select class="sel" id="sort" aria-label="Ordenar">
@@ -136,101 +187,242 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding-top:10px}
   <footer id="foot"></footer>
 </div>
 
+<div class="bagbar" id="bagbar" hidden>
+  <div class="info"><span id="bagCount"></span><b id="bagTotal"></b></div>
+  <button class="btn plain" type="button" id="bagOpen">Ver pedido</button>
+  <a class="btn wa" id="bagSendQuick" target="_blank" rel="noopener">Enviar</a>
+</div>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"></a>
+
 <div class="overlay" id="ov" hidden><aside class="sheet" role="dialog" aria-modal="true" aria-labelledby="dTitle" id="detail"></aside></div>
+<div class="overlay" id="bagOv" hidden><aside class="sheet narrow" role="dialog" aria-modal="true" aria-labelledby="bTitle" id="bag"></aside></div>
 
 <script>
+const MODE="revenda";
+const PHONE='5511954023947';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const BRL=v=>(isFinite(v)?v:0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const NUM=v=>(isFinite(v)?v:0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const D=window.CATALOGO||{catalogs:[],products:[],config:{}}, C=D.config||{};
+const REV = MODE==='revenda';
 const CAT={red:'var(--cat-red)',green:'var(--cat-green)',gold:'var(--cat-gold)',blue:'var(--cat-blue)',plum:'var(--cat-plum)',teal:'var(--cat-teal)'};
-let PRICES={}, active=(D.catalogs.length===1?D.catalogs[0].id:'all'), openId=null;
+const WA_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>';
+const SHARE_SVG='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>';
+const T = REV ? {
+  h1:'Catálogo de <span>Revenda</span>',
+  sub:'Peças impressas em 3D sob encomenda, com preço especial para revender. Veja quanto você paga e quanto cobrar em cada plataforma.',
+  how:[['Escolha','Monte seu pedido com as quantidades de cada peça.'],['Envie no WhatsApp','A lista vai pronta, com seu preço e o total.'],['Revenda com lucro','Use o preço sugerido para anunciar no Mercado Livre, Shopee e TikTok.']],
+  price:'Seu preço', priceLong:'Seu preço por unidade',
+  waTop:'Olá! Vi o catálogo de revenda de peças 3D e quero mais informações.',
+  orderHead:'Olá! Sou revendedor e quero fazer um pedido pelo catálogo de revenda:',
+  key:'pedido-revenda'
+} : {
+  h1:'Decoração de Natal <span>3D</span>',
+  sub:'Peças impressas em 3D sob encomenda, feitas uma a uma com cores reais do filamento. Escolha, monte seu pedido e finalize pelo WhatsApp.',
+  how:[['Escolha','Adicione as peças e kits que quiser ao seu pedido.'],['Envie no WhatsApp','Sua lista chega pronta para combinar cores, pagamento e entrega.'],['Receba','Produção em poucos dias úteis, com pagamento por Pix.']],
+  price:'Preço', priceLong:'Preço',
+  waTop:'Olá! Vi o catálogo de decoração 3D e quero fazer um pedido.',
+  orderHead:'Olá! Quero fazer este pedido pelo catálogo:',
+  key:'pedido-vitrine'
+};
+let PRICES={}, active=(D.catalogs.length===1?D.catalogs[0].id:'all'), kind='all', openId=null, toastT=0;
+const byId=id=>D.products.find(p=>p.id===id);
+const isKit=p=>!!(p.kitItems&&p.kitItems.length);
+const priceOf=p=>PRICES[p.id]||0;
+const pageUrl=()=>location.href.split('#')[0];
+function waLink(text){ return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(text); }
+function toast(t){ document.querySelectorAll('.toast').forEach(x=>x.remove()); const el=document.createElement('div'); el.className='toast'; el.setAttribute('role','status'); el.textContent=t; document.body.appendChild(el); clearTimeout(toastT); toastT=setTimeout(()=>el.remove(),2200); }
+function img(p,alt=true,lazy=false){ return '<img src="'+esc(p.image)+'" alt="'+(alt?esc(p.name):'')+'"'+(lazy?' loading="lazy"':'')+' decoding="async">'; }
+function prazo(p){ const m=/Produ[cç][aã]o em at[eé] (\d+) dias? [uú]teis/i.exec(p.description||''); return m?+m[1]:0; }
+function kitParts(p){ return isKit(p)?p.kitItems.map(byId).filter(Boolean):[]; }
+function kitSeparate(p){ const ps=kitParts(p); if(!ps.length||ps.some(x=>!priceOf(x))) return 0; return ps.reduce((a,x)=>a+priceOf(x),0); }
+function kitSave(p){ const s=kitSeparate(p), v=priceOf(p); return s&&v&&s-v>=1 ? s-v : 0; }
+function swatches(p,max=8){ const c=(p.colors||[]).slice(0,max); return c.length?'<div class="swatches" aria-label="Cores: '+esc(p.colorText||'')+'">'+c.map(x=>'<span class="sw" style="background:'+esc(x)+'"></span>').join('')+'</div>':''; }
 
-function waLink(text){ return 'https://wa.me/'+(C.whatsapp||'')+'?text='+encodeURIComponent(text); }
-$('waTop').href=waLink('Olá! Vi o catálogo de revenda de peças 3D e quero mais informações.');
-
-/* preço do revendedor: planilha precos.csv (id;produto;preco_revendedor) */
+/* preços: planilha precos.csv (última coluna) */
 async function loadPrices(){
   try{ const t=await fetch('precos.csv?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'');
     t.split(/\r?\n/).slice(1).forEach(l=>{ const p=l.split(';'); if(p.length<3) return; const v=parseFloat(p[p.length-1].trim().replace(/[R$\s]/g,'').replace(/\.(?=\d{3}(\D|$))/g,'').replace(',','.')); if(p[0].trim()&&isFinite(v)&&v>0) PRICES[p[0].trim()]=v; });
   }catch(e){}
-  render(); if(openId) renderDetail();
+  render(); renderBag(); if(openId) renderDetail();
 }
-const yourPrice=p=>PRICES[p.id]||0;
 
-/* preço sugerido de revenda: cobre seu preço + embalagem, taxas da plataforma e o lucro do revendedor */
-const P=v=>v/100;
+/* revenda: preço sugerido por plataforma */
+const P=v=>(+v||0)/100;
 function platforms(){
-  const ml=pct=>[{min:0,max:79,pct:P(pct),fix:C.mlCustoOp,fl:'tarifa por unidade'},{min:79,max:Infinity,pct:P(pct),fix:C.mlFrete,fl:'frete grátis'}];
+  const ml=pct=>[{min:0,max:79,pct:P(pct),fix:+C.mlCustoOp||0},{min:79,max:Infinity,pct:P(pct),fix:+C.mlFrete||0}];
+  const tk=(C.tkLow&&C.tkHigh)?[{min:0,max:50,pct:P(C.tkLow[0]),fix:+C.tkLow[1]},{min:50,max:Infinity,pct:P(C.tkHigh[0]),fix:+C.tkHigh[1]}]:[];
   return [
     {name:'Mercado Livre',sub:'Anúncio Clássico',tiers:ml(C.mlClassico),extra:0},
     {name:'Mercado Livre',sub:'Anúncio Premium (parcelado)',tiers:ml(C.mlPremium),extra:0},
-    {name:'Shopee',sub:'Comissão + tarifa por item',tiers:(C.sh||[]).map(t=>({min:t[0],max:t[1]>=1e9?Infinity:t[1],pct:P(t[2]),fix:t[3]})),extra:0},
-    {name:'TikTok Shop',sub:'Comissão + programa de frete',tiers:[{min:0,max:50,pct:P(C.tkLow[0]),fix:C.tkLow[1]},{min:50,max:Infinity,pct:P(C.tkHigh[0]),fix:C.tkHigh[1]}],extra:P(C.tkFrete||0)},
-  ];
+    {name:'Shopee',sub:'Comissão + tarifa por item',tiers:(C.sh||[]).map(t=>({min:t[0],max:t[1]>=1e9?Infinity:t[1],pct:P(t[2]),fix:+t[3]})),extra:0},
+    {name:'TikTok Shop',sub:'Comissão + programa de frete',tiers:tk,extra:P(C.tkFrete)},
+  ].filter(x=>x.tiers.length);
 }
 const round90=p=>Math.ceil(p+0.10)-0.10;
 function resale(p){
-  const cost=yourPrice(p)+(C.resalePack||0), m=P(C.resaleMargin||25);
+  const cost=priceOf(p)+(+C.resalePack||0), m=P(C.resaleMargin||25);
   return platforms().map(pl=>{
     const c=[]; for(const t of pl.tiers){ const den=1-t.pct-pl.extra-m; if(den<=0.01) continue; const v=(cost+t.fix)/den; if(v>=t.min&&v<t.max) c.push(v); else if(v<t.min) c.push(t.min); }
-    if(!c.length||!yourPrice(p)) return {pl,bad:true};
+    if(!c.length||!priceOf(p)) return {pl,bad:true};
     const price=round90(Math.min(...c)), t=pl.tiers.find(t=>price>=t.min&&price<t.max)||pl.tiers[pl.tiers.length-1];
     const fees=price*(t.pct+pl.extra)+t.fix, profit=price-fees-cost;
     return {pl,price,fees,profit};
   });
 }
 
-function render(){
-  const count=id=>D.products.filter(p=>id==='all'||p.catalogId===id).length;
-  $('tabs').innerHTML=(D.catalogs.length>1?'<button class="chip" type="button" data-c="all" aria-pressed="'+(active==='all')+'">Todos <span class="n">'+count('all')+'</span></button>':'')+
-    D.catalogs.map(c=>'<button class="chip" type="button" data-c="'+esc(c.id)+'" aria-pressed="'+(active===c.id)+'"><span class="dot" style="background:'+(CAT[c.color]||CAT.teal)+'"></span>'+esc(c.name)+' <span class="n">'+count(c.id)+'</span></button>').join('');
-  $('tabs').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{active=b.dataset.c; render();});
-  const q=$('q').value.trim().toLowerCase(), s=$('sort').value;
-  let list=D.products.filter(p=>(active==='all'||p.catalogId===active)&&(!q||(p.name+' '+p.description).toLowerCase().includes(q)));
-  list.sort((a,b)=>s==='price'?yourPrice(a)-yourPrice(b):s==='priceDesc'?yourPrice(b)-yourPrice(a):a.name.localeCompare(b.name,'pt-BR'));
-  if(!list.length){ $('grid').innerHTML='<div class="empty">Nenhum produto encontrado.</div>'; return; }
-  $('grid').innerHTML=list.map(p=>{ const r=resale(p).find(x=>!x.bad);
-    return '<button class="card" type="button" data-id="'+esc(p.id)+'"><div class="thumb"><img src="'+esc(p.image)+'" alt="'+esc(p.name)+'" loading="lazy"></div>'+
-      '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+
-      '<div class="card-prices"><div class="you"><small>Seu preço</small><b>'+(yourPrice(p)?BRL(yourPrice(p)):'Consulte')+'</b></div><div><small>Revenda no ML</small><b>'+(r?BRL(r.price):'—')+'</b></div></div></div></button>'; }).join('');
-  $('grid').querySelectorAll('.card').forEach(el=>el.onclick=()=>openDetail(el.dataset.id));
-  $('foot').textContent='Preços atualizados em '+new Date((D.updated||'')+'T12:00:00').toLocaleDateString('pt-BR')+'. Taxas das plataformas de novembro de 2026.';
+/* pedido (fica salvo neste navegador) */
+let BAG={};
+try{ BAG=JSON.parse(localStorage.getItem(T.key)||'{}')||{}; }catch(e){ BAG={}; }
+function saveBag(){ try{ localStorage.setItem(T.key,JSON.stringify(BAG)); }catch(e){} }
+function qtyOf(id){ return BAG[id]||0; }
+function setQty(id,q){ q=Math.max(0,Math.min(999,Math.round(q)||0)); if(q) BAG[id]=q; else delete BAG[id]; saveBag(); render(); renderBag(); if(openId) renderDetail(); if(!$('bagOv').hidden) renderBagSheet(); }
+function bagLines(){ return Object.keys(BAG).map(id=>({p:byId(id),q:BAG[id]})).filter(x=>x.p&&x.q>0); }
+function bagTotal(){ return bagLines().reduce((a,x)=>a+priceOf(x.p)*x.q,0); }
+function bagCount(){ return bagLines().reduce((a,x)=>a+x.q,0); }
+function orderText(lines, extra){
+  const L=lines.map(x=>'• '+x.q+'x '+x.p.name+(priceOf(x.p)?' — '+BRL(priceOf(x.p))+(x.q>1?' cada = '+BRL(priceOf(x.p)*x.q):''):''));
+  const tot=lines.reduce((a,x)=>a+priceOf(x.p)*x.q,0);
+  let t=T.orderHead+'\n\n'+L.join('\n')+(tot?'\n\nTotal: '+BRL(tot):'');
+  if(extra&&extra.name) t+='\n\nNome: '+extra.name;
+  if(extra&&extra.city) t+='\nCidade: '+extra.city;
+  if(extra&&extra.obs) t+='\nObservações: '+extra.obs;
+  return t+'\n\nCatálogo: '+pageUrl();
 }
-function openDetail(id){ openId=id; renderDetail(); $('ov').hidden=false; document.body.style.overflow='hidden'; setTimeout(()=>{const x=$('dClose'); if(x) x.focus();},0); }
-function closeDetail(){ openId=null; $('ov').hidden=true; document.body.style.overflow=''; }
+function oneText(p,q){ return orderText([{p,q:q||1}]).replace(T.orderHead, REV?'Olá! Sou revendedor e tenho interesse em:':'Olá! Tenho interesse em:')+'\nPode me passar cores e prazo?'; }
+function stepper(id,q,label){ return '<div class="stepper" role="group" aria-label="Quantidade de '+esc(label)+'"><button type="button" data-dec="'+esc(id)+'" aria-label="Diminuir">−</button><span aria-live="polite">'+q+'</span><button type="button" data-inc="'+esc(id)+'" aria-label="Aumentar">+</button></div>'; }
+function bindSteppers(root){
+  root.querySelectorAll('[data-inc]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); setQty(b.dataset.inc,qtyOf(b.dataset.inc)+1); });
+  root.querySelectorAll('[data-dec]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); setQty(b.dataset.dec,qtyOf(b.dataset.dec)-1); });
+  root.querySelectorAll('[data-add]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); setQty(b.dataset.add,qtyOf(b.dataset.add)+1); toast('Adicionado ao pedido'); });
+}
+
+/* lista */
+function render(){
+  const inCat=p=>active==='all'||p.catalogId===active;
+  const kits=D.products.filter(p=>inCat(p)&&isKit(p)).length, pieces=D.products.filter(p=>inCat(p)&&!isKit(p)).length;
+  const count=id=>D.products.filter(p=>id==='all'||p.catalogId===id).length;
+  $('filters').innerHTML=(D.catalogs.length>1?'<button class="chip" type="button" data-c="all" aria-pressed="'+(active==='all')+'">Todos <span class="c">'+count('all')+'</span></button>':'')+
+    (D.catalogs.length>1?D.catalogs:[]).map(c=>'<button class="chip" type="button" data-c="'+esc(c.id)+'" aria-pressed="'+(active===c.id)+'"><span class="dot" style="background:'+(CAT[c.color]||CAT.teal)+'"></span>'+esc(c.name)+' <span class="c">'+count(c.id)+'</span></button>').join('')+
+    (kits&&pieces?(D.catalogs.length>1?'<span class="sep" aria-hidden="true"></span>':'')+[['all','Tudo'],['piece','Peças avulsas',pieces],['kit','Kits',kits]].map(k=>'<button class="chip" type="button" data-k="'+k[0]+'" aria-pressed="'+(kind===k[0])+'">'+k[1]+(k[2]?' <span class="c">'+k[2]+'</span>':'')+'</button>').join(''):'');
+  $('filters').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{active=b.dataset.c; render();});
+  $('filters').querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{kind=b.dataset.k; render();});
+  const q=$('q').value.trim().toLowerCase(), s=$('sort').value;
+  const norm=t=>t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  let list=D.products.filter(p=>inCat(p)&&(kind==='all'||(kind==='kit')===isKit(p))&&(!q||norm(p.name+' '+(p.description||'')+' '+(p.colorText||'')).includes(norm(q))));
+  list.sort((a,b)=>s==='price'?priceOf(a)-priceOf(b):s==='priceDesc'?priceOf(b)-priceOf(a):a.name.localeCompare(b.name,'pt-BR'));
+  if(!list.length){ $('grid').innerHTML='<div class="empty">Nenhum produto encontrado. <button class="btn ghost" type="button" id="clearQ">Limpar busca</button></div>'; const c=$('clearQ'); if(c) c.onclick=()=>{ $('q').value=''; kind='all'; render(); }; return; }
+  $('grid').innerHTML=list.map(p=>{
+    const v=priceOf(p), sv=kitSave(p), q=qtyOf(p.id), r=REV?resale(p).find(x=>!x.bad):null;
+    return '<article class="card">'+
+      '<button class="card-open" type="button" data-open="'+esc(p.id)+'" aria-label="Ver '+esc(p.name)+'">'+
+        '<div class="thumb">'+img(p,true,true)+(isKit(p)?'<span class="badge kit">Kit · '+kitParts(p).length+' peças</span>':'')+(sv?'<span class="badge save">Economize '+BRL(sv)+'</span>':'')+'</div>'+
+        '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+swatches(p)+
+          '<div class="card-prices'+(REV?'':' one')+'"><div class="main"><small>'+T.price+'</small><b>'+(v?BRL(v):'Consulte')+'</b></div>'+
+          (REV?'<div><small>Revenda no ML</small><b>'+(r?BRL(r.price):'—')+'</b></div>':'')+'</div></div>'+
+      '</button>'+
+      '<div class="card-actions">'+(q?stepper(p.id,q,p.name):'<button class="btn" type="button" data-add="'+esc(p.id)+'">Adicionar</button>')+
+        '<a class="btn wa icon" href="'+esc(waLink(oneText(p,q||1)))+'" target="_blank" rel="noopener" aria-label="Pedir '+esc(p.name)+' pelo WhatsApp" title="Pedir pelo WhatsApp">'+WA_SVG+'</a></div>'+
+    '</article>'; }).join('');
+  $('grid').querySelectorAll('[data-open]').forEach(el=>el.onclick=()=>go(el.dataset.open));
+  bindSteppers($('grid'));
+}
+
+/* ficha do produto (endereço #p=id, o botão Voltar do celular fecha) */
+let pushed=false;
+function go(id){ const h="#p="+encodeURIComponent(id); if(location.hash===h) return openDetail(id); if(openId){ history.replaceState(null,"",h); openDetail(id); } else { pushed=true; location.hash=h; } }
+function fromHash(){ const m=/^#p=(.+)$/.exec(location.hash), id=m?decodeURIComponent(m[1]):""; if(id&&byId(id)) openDetail(id); else { pushed=false; if(openId) closeDetail(true); } }
+function openDetail(id){ const was=openId; openId=id; renderDetail(); $('ov').hidden=false; document.body.style.overflow='hidden'; $('detail').scrollTop=0; if(!was) setTimeout(()=>{const x=$('dClose'); if(x) x.focus();},0); }
+function closeDetail(fromNav){ openId=null; $("ov").hidden=true; if($("bagOv").hidden) document.body.style.overflow=""; if(!fromNav&&/^#p=/.test(location.hash)){ if(pushed){ pushed=false; history.back(); } else history.replaceState(null,"",pageUrl()); } }
 function renderDetail(){
-  const p=D.products.find(x=>x.id===openId); if(!p) return closeDetail();
-  const cat=D.catalogs.find(c=>c.id===p.catalogId), yp=yourPrice(p), rs=resale(p);
-  const dims=p.dims&&p.dims.length===3?p.dims.map(v=>(Math.round(v)/10).toLocaleString('pt-BR')).join(' × ')+' cm':'';
-  const msg='Olá! Vi no catálogo de revenda e tenho interesse em: '+p.name+(yp?' (seu preço '+BRL(yp)+')':'')+'. Pode me passar disponibilidade, cores e prazo?';
+  const p=byId(openId); if(!p) return closeDetail();
+  const cat=D.catalogs.find(c=>c.id===p.catalogId), v=priceOf(p), q=qtyOf(p.id), sv=kitSave(p), sep=kitSeparate(p), pz=prazo(p), parts=kitParts(p);
+  const dims=p.dims&&p.dims.length===3?p.dims.map(x=>(Math.round(x)/10).toLocaleString('pt-BR')).join(' × ')+' cm':'';
+  const rs=REV?resale(p):[];
   $('detail').innerHTML=
-  '<div class="sheet-head"><span class="tag" style="color:'+(cat?(CAT[cat.color]||CAT.teal):'inherit')+'">'+esc(cat?cat.name:'')+'</span><button class="x" id="dClose" type="button" aria-label="Fechar">×</button></div>'+
+  '<div class="sheet-head"><span class="tag" style="color:'+(cat?(CAT[cat.color]||CAT.teal):'inherit')+'">'+esc(cat?cat.name:'')+'</span>'+
+    '<div class="head-actions"><button class="x" type="button" id="dShare" aria-label="Compartilhar este produto" title="Compartilhar">'+SHARE_SVG+'</button><button class="x" id="dClose" type="button" aria-label="Fechar">×</button></div></div>'+
   '<div class="sheet-body">'+
-    '<section class="hero"><div class="thumb"><img src="'+esc(p.image)+'" alt="'+esc(p.name)+'"></div>'+
+    '<section class="hero"><div class="thumb">'+img(p)+'</div>'+
       '<div class="hero-info"><h2 class="prod-name" id="dTitle">'+esc(p.name)+'</h2>'+
-        '<div class="yourprice"><small>Seu preço por unidade</small><div class="big">'+(yp?'<span>R$ </span>'+yp.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}):'Consulte')+'</div></div>'+
-        '<a class="btn wa lg" href="'+esc(waLink(msg))+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Pedir pelo WhatsApp</a>'+
-        '<p class="desc">'+esc(p.description||'')+'</p>'+
+        '<div class="pricebox"><small>'+T.priceLong+'</small><div class="big">'+(v?'<span>R$ </span>'+NUM(v):'Consulte')+'</div>'+
+          (sv?'<div class="savenote">Comprando as peças separadas: '+BRL(sep)+'. No kit você economiza '+BRL(sv)+'.</div>':'')+'</div>'+
+        '<div class="buyrow">'+stepper(p.id,q||1,p.name).replace('data-dec="'+esc(p.id)+'"','data-dq="-1"').replace('data-inc="'+esc(p.id)+'"','data-dq="1"')+
+          '<button class="btn" type="button" id="dAdd">'+(q?'Atualizar pedido':'Adicionar ao pedido')+'</button></div>'+
+        '<a class="btn wa lg" id="dWa" target="_blank" rel="noopener">'+WA_SVG+'Pedir pelo WhatsApp</a>'+
+        (q?'<p class="note" style="margin:0">Você já tem '+q+' no pedido. <button class="btn ghost" type="button" id="dSeeBag" style="padding:2px 6px;min-height:0">Ver pedido</button></p>':'')+
       '</div></section>'+
-    '<section class="panel"><h3>Preço sugerido para revenda</h3><div class="tablewrap"><table class="prices"><thead><tr><th>Plataforma</th><th>Anunciar por</th><th>Taxas</th><th>Seu lucro</th></tr></thead><tbody>'+
+    (parts.length?'<section class="panel"><h3>O kit inclui</h3><div class="items">'+parts.map(x=>'<button class="item" type="button" data-open="'+esc(x.id)+'"><div class="thumb">'+img(x)+'</div><span>'+esc(x.name)+'</span>'+(priceOf(x)?'<small>'+BRL(priceOf(x))+' avulso</small>':'')+'</button>').join('')+'</div></section>':'')+
+    (REV?'<section class="panel"><h3>Preço sugerido para revenda</h3><div class="tablewrap"><table class="prices"><thead><tr><th>Plataforma</th><th>Anunciar por</th><th>Taxas</th><th>Seu lucro</th></tr></thead><tbody>'+
       rs.map(r=>r.bad?'<tr><td>'+esc(r.pl.name)+'<small>'+esc(r.pl.sub)+'</small></td><td colspan="3">Consulte</td></tr>':
         '<tr><td>'+esc(r.pl.name)+'<small>'+esc(r.pl.sub)+'</small></td><td class="price">'+BRL(r.price)+'</td><td>'+BRL(r.fees)+'</td><td class="pos">'+BRL(r.profit)+'</td></tr>').join('')+
-    '</tbody></table></div>'+
-    '<p class="note">Calculado com as taxas de cada plataforma em novembro de 2026, mais '+BRL(C.resalePack||0)+' de embalagem e envio, para você ficar com cerca de '+(C.resaleMargin||25)+'% de lucro sobre o preço de venda. Confira as taxas no painel de cada plataforma, pois mudam conforme a categoria.</p></section>'+
+      '</tbody></table></div><p class="note">Calculado com as taxas de cada plataforma em novembro de 2026, mais '+BRL(+C.resalePack||0)+' de embalagem e envio, para você ficar com cerca de '+(C.resaleMargin||25)+'% de lucro sobre o preço de venda. Confira as taxas no painel de cada plataforma, pois mudam conforme a categoria.</p></section>':'')+
     '<section class="panel"><h3>Detalhes</h3><div class="kv">'+
       '<div><small>Material</small><b>'+esc(p.material||'PLA')+'</b></div>'+
-      '<div><small>Cores</small><b>'+(p.colors&&p.colors.length?p.colors.map(c=>'<span class="sw" style="background:'+esc(c)+'"></span>').join(''):esc(p.colorText||'—'))+'</b></div>'+
+      '<div><small>Cores</small><b>'+esc(p.colorText||'—')+'</b></div>'+
       (dims?'<div><small>Tamanho</small><b>'+esc(dims)+'</b></div>':'')+
-      '<div><small>Produção</small><b>Sob encomenda</b></div>'+
+      '<div><small>Produção</small><b>'+(pz?'Até '+pz+' dias úteis':'Sob encomenda')+'</b></div>'+
     '</div></section>'+
+    (p.description?'<section class="panel"><h3>Descrição</h3><p class="desc">'+esc(p.description)+'</p></section>':'')+
   '</div>';
-  $('dClose').onclick=closeDetail;
+  let dq=q||1; const qs=$('detail').querySelector('.buyrow .stepper span');
+  const upd=()=>{ qs.textContent=dq; $('dWa').href=waLink(oneText(p,dq)); };
+  $('detail').querySelectorAll('[data-dq]').forEach(b=>b.onclick=()=>{ dq=Math.max(1,Math.min(999,dq+(+b.dataset.dq))); upd(); });
+  upd();
+  $('dAdd').onclick=()=>{ setQty(p.id,dq); toast(dq+'× no pedido'); };
+  if($('dSeeBag')) $('dSeeBag').onclick=openBag;
+  $('detail').querySelectorAll('[data-open]').forEach(el=>el.onclick=()=>go(el.dataset.open));
+  $('dClose').onclick=()=>closeDetail();
+  $('dShare').onclick=async()=>{ const url=pageUrl()+'#p='+encodeURIComponent(p.id), text=p.name+(v?' — '+BRL(v):'');
+    try{ if(navigator.share){ await navigator.share({title:p.name,text,url}); return; } }catch(e){ if(e&&e.name==='AbortError') return; }
+    try{ await navigator.clipboard.writeText(url); toast('Link copiado'); }catch(e){ prompt('Copie o link:',url); } };
 }
+
+/* pedido: barra e painel */
+function renderBag(){
+  const n=bagCount(), tot=bagTotal();
+  $('bagbar').hidden=!n; $('fab').hidden=!!n;
+  if(n){ $('bagCount').textContent='Seu pedido · '+n+(n>1?' itens':' item'); $('bagTotal').textContent=tot?BRL(tot):'A combinar'; $('bagSendQuick').href=waLink(orderText(bagLines())); }
+}
+function openBag(){ renderBagSheet(); $('bagOv').hidden=false; document.body.style.overflow='hidden'; setTimeout(()=>{const x=$('bClose'); if(x) x.focus();},0); }
+function closeBag(){ $('bagOv').hidden=true; if($('ov').hidden) document.body.style.overflow=''; }
+let EXTRA={}; try{ EXTRA=JSON.parse(localStorage.getItem(T.key+'-dados')||'{}')||{}; }catch(e){}
+function renderBagSheet(){
+  const L=bagLines(), tot=bagTotal();
+  $('bag').innerHTML='<div class="sheet-head"><span class="t" id="bTitle">Seu pedido</span><button class="x" id="bClose" type="button" aria-label="Fechar">×</button></div>'+
+  '<div class="sheet-body">'+
+   (L.length?'<div>'+L.map(x=>'<div class="bagitem">'+img(x.p,false)+'<div><div class="nm">'+esc(x.p.name)+'</div><div class="pr">'+(priceOf(x.p)?BRL(priceOf(x.p))+' cada'+(x.q>1?' · '+BRL(priceOf(x.p)*x.q):''):'Preço a combinar')+'</div></div>'+stepper(x.p.id,x.q,x.p.name)+'</div>').join('')+'</div>'+
+     '<div class="total"><span>Total</span><span>'+(tot?BRL(tot):'A combinar')+'</span></div>'+
+     '<label class="fl">Seu nome<input id="fName" autocomplete="name" value="'+esc(EXTRA.name||'')+'"></label>'+
+     '<label class="fl">Cidade<input id="fCity" autocomplete="address-level2" value="'+esc(EXTRA.city||'')+'"></label>'+
+     '<label class="fl">Observações (cores, data, retirada…)<textarea id="fObs" rows="3">'+esc(EXTRA.obs||'')+'</textarea></label>'+
+     '<a class="btn wa lg" id="bSend" target="_blank" rel="noopener">'+WA_SVG+'Enviar pedido pelo WhatsApp</a>'+
+     '<button class="btn plain" type="button" id="bClear">Esvaziar pedido</button>'+
+     '<p class="note" style="margin:0">O pedido só é confirmado depois da conversa no WhatsApp. Cores, prazo e entrega são combinados por lá.</p>'
+   :'<div class="empty">Seu pedido está vazio. Toque em <b>Adicionar</b> nos produtos para montar a lista.</div>')+
+  '</div>';
+  $('bClose').onclick=closeBag;
+  bindSteppers($('bag'));
+  if(!L.length) return;
+  const sync=()=>{ EXTRA={name:$('fName').value.trim(),city:$('fCity').value.trim(),obs:$('fObs').value.trim()}; try{ localStorage.setItem(T.key+'-dados',JSON.stringify(EXTRA)); }catch(e){} $('bSend').href=waLink(orderText(bagLines(),EXTRA)); };
+  ['fName','fCity','fObs'].forEach(i=>$(i).addEventListener('input',sync)); sync();
+  $('bClear').onclick=()=>{ if(confirm('Tirar todos os itens do pedido?')){ BAG={}; saveBag(); render(); renderBag(); renderBagSheet(); } };
+}
+
+/* início */
+$('h1').innerHTML=T.h1; $('sub').textContent=T.sub;
+$('how').innerHTML=T.how.map((h,i)=>'<div><span class="n">'+(i+1)+'</span><span><b>'+h[0]+'</b>'+h[1]+'</span></div>').join('');
+$('waTop').innerHTML=WA_SVG+'Falar no WhatsApp'; $('waTop').href=waLink(T.waTop);
+$('fab').innerHTML=WA_SVG; $('fab').href=waLink(T.waTop);
+$('bagOpen').onclick=openBag;
 $('q').addEventListener('input',render); $('sort').addEventListener('change',render);
 $('ov').addEventListener('click',e=>{ if(e.target.id==='ov') closeDetail(); });
-document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!$('ov').hidden) closeDetail(); });
-render(); loadPrices();
+$('bagOv').addEventListener('click',e=>{ if(e.target.id==='bagOv') closeBag(); });
+document.addEventListener('keydown',e=>{ if(e.key!=='Escape') return; if(!$('bagOv').hidden) closeBag(); else if(!$('ov').hidden) closeDetail(); });
+window.addEventListener('hashchange',fromHash);
+$('foot').innerHTML='<span>Preços atualizados em '+new Date((D.updated||'')+'T12:00:00').toLocaleDateString('pt-BR')+'. Peças feitas sob encomenda em impressão 3D, podem ter pequenas marcas das camadas.</span><a href="'+esc(waLink(T.waTop))+'" target="_blank" rel="noopener">Dúvidas? Fale com a gente no WhatsApp</a>';
+render(); renderBag(); fromHash(); loadPrices();
 </script>
 </body>
 </html>
