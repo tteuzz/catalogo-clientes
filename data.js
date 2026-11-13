@@ -196,6 +196,170 @@ window.CATALOGO = {
                          "image":  "img/natal-kit-bandeja-placa.jpg",
                          "createdAt":  1794530000000
                      },
+{
+    "id":  "natal-kit-papai-urso",
+    "catalogId":  "natal",
+    "name":  "Kit de Natal na bandeja (Papai Noel, Urso polar e Árvore)",
+    "description":  "Kit pronto para decorar a mesa de Natal: Papai Noel com efeito tricô, urso polar de gorro, árvore de Natal minimalista e uma bandeja decorativa para reunir tudo. Ótimo para presentear.\n\nO KIT INCLUI\n- Papai Noel efeito tricô (cerca de 6 a 7 cm de altura)\n- Urso polar com gorro de Natal (cerca de 7 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#C12E1F",
+                   "#FFFFFF",
+                   "#D8A48B",
+                   "#000000",
+                   "#00AE42",
+                   "#6F5034",
+                   "#E4BD68"
+               ],
+    "colorText":  "vermelho, branco, pele, preto, verde, marrom e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-papai-urso.jpg",
+    "createdAt":  1794540001000
+},
+{
+    "id":  "natal-kit-inverno",
+    "catalogId":  "natal",
+    "name":  "Kit Inverno na bandeja (Boneco de neve, Urso polar e Árvore)",
+    "description":  "Kit com clima de inverno para a mesa de Natal: boneco de neve com efeito tricô, urso polar de gorro, árvore de Natal minimalista e uma bandeja decorativa. Ótimo para presentear.\n\nO KIT INCLUI\n- Boneco de neve efeito tricô (cerca de 6 cm de altura)\n- Urso polar com gorro de Natal (cerca de 7 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#FFFFFF",
+                   "#C12E1F",
+                   "#000000",
+                   "#FF9016",
+                   "#00AE42",
+                   "#6F5034",
+                   "#E4BD68"
+               ],
+    "colorText":  "branco, vermelho, preto, laranja, verde, marrom e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-inverno.jpg",
+    "createdAt":  1794540002000
+},
+{
+    "id":  "natal-kit-trico",
+    "catalogId":  "natal",
+    "name":  "Kit Tricô na bandeja (Papai Noel, Rena e Boneco de neve)",
+    "description":  "Kit da coleção efeito tricô: Papai Noel, rena e boneco de neve com textura de tricô, sobre uma bandeja decorativa. Fofo, colorido e ótimo para presentear.\n\nO KIT INCLUI\n- Papai Noel efeito tricô (cerca de 6 a 7 cm de altura)\n- Rena efeito tricô (cerca de 7 cm de altura)\n- Boneco de neve efeito tricô (cerca de 6 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#C12E1F",
+                   "#FFFFFF",
+                   "#D8A48B",
+                   "#000000",
+                   "#B5865B",
+                   "#6F5034",
+                   "#FF9016"
+               ],
+    "colorText":  "vermelho, branco, pele, preto, caramelo, marrom e laranja",
+    "dims":  null,
+    "image":  "img/natal-kit-trico.jpg",
+    "createdAt":  1794540003000
+},
+{
+    "id":  "natal-kit-boneco-rena",
+    "catalogId":  "natal",
+    "name":  "Kit de Natal na bandeja (Boneco de neve, Rena e Árvore)",
+    "description":  "Kit pronto para decorar a mesa de Natal: boneco de neve e rena com efeito tricô, árvore de Natal minimalista e uma bandeja decorativa para reunir tudo. Ótimo para presentear.\n\nO KIT INCLUI\n- Boneco de neve efeito tricô (cerca de 6 cm de altura)\n- Rena efeito tricô (cerca de 7 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#FFFFFF",
+                   "#C12E1F",
+                   "#000000",
+                   "#FF9016",
+                   "#B5865B",
+                   "#6F5034",
+                   "#00AE42",
+                   "#E4BD68"
+               ],
+    "colorText":  "branco, vermelho, preto, laranja, caramelo, marrom, verde e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-boneco-rena.jpg",
+    "createdAt":  1794540004000
+},
+{
+    "id":  "natal-kit-sagrado",
+    "catalogId":  "natal",
+    "name":  "Kit Natal Sagrado na bandeja (Presépio, Jesus tricô e Árvore)",
+    "description":  "Kit para lembrar o verdadeiro sentido do Natal: presépio minimalista com José, Maria e o Menino Jesus, Jesus com efeito tricô, árvore de Natal minimalista e uma bandeja decorativa. Ótimo para presentear.\n\nO KIT INCLUI\n- Presépio minimalista (José, Maria e Menino Jesus) (cerca de 8 x 8 x 11,5 cm)\n- Jesus efeito tricô (cerca de 6 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#EAE1D5",
+                   "#AD7350",
+                   "#F7D7A6",
+                   "#FFFFFF",
+                   "#000000",
+                   "#00AE42",
+                   "#6F5034",
+                   "#E4BD68"
+               ],
+    "colorText":  "marfim, marrom, pele, branco, preto, verde e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-sagrado.jpg",
+    "createdAt":  1794540005000
+},
+{
+    "id":  "natal-kit-papai-urso-placa",
+    "catalogId":  "natal",
+    "name":  "Kit de Natal na bandeja (Papai Noel, Urso polar e Árvore) + Placa Feliz Natal",
+    "description":  "Kit completo para a mesa de Natal: Papai Noel com efeito tricô, urso polar de gorro, árvore de Natal minimalista, bandeja decorativa e a placa Feliz Natal com floco de neve. Ótimo para presentear.\n\nO KIT INCLUI\n- Papai Noel efeito tricô (cerca de 6 a 7 cm de altura)\n- Urso polar com gorro de Natal (cerca de 7 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n- Placa Feliz Natal com floco de neve (cerca de 13 x 14 cm, 1,4 cm de espessura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#C12E1F",
+                   "#FFFFFF",
+                   "#D8A48B",
+                   "#000000",
+                   "#00AE42",
+                   "#6F5034",
+                   "#E4BD68"
+               ],
+    "colorText":  "vermelho, branco, pele, preto, verde, marrom e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-papai-urso-placa.jpg",
+    "createdAt":  1794540006000
+},
+{
+    "id":  "natal-kit-inverno-placa",
+    "catalogId":  "natal",
+    "name":  "Kit Inverno na bandeja (Boneco de neve, Urso polar e Árvore) + Placa Feliz Natal",
+    "description":  "Kit com clima de inverno para a mesa de Natal: boneco de neve com efeito tricô, urso polar de gorro, árvore de Natal minimalista, bandeja decorativa e a placa Feliz Natal com floco de neve. Ótimo para presentear.\n\nO KIT INCLUI\n- Boneco de neve efeito tricô (cerca de 6 cm de altura)\n- Urso polar com gorro de Natal (cerca de 7 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n- Placa Feliz Natal com floco de neve (cerca de 13 x 14 cm, 1,4 cm de espessura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#FFFFFF",
+                   "#C12E1F",
+                   "#000000",
+                   "#FF9016",
+                   "#00AE42",
+                   "#6F5034",
+                   "#E4BD68"
+               ],
+    "colorText":  "branco, vermelho, preto, laranja, verde, marrom e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-inverno-placa.jpg",
+    "createdAt":  1794540007000
+},
+{
+    "id":  "natal-kit-completo",
+    "catalogId":  "natal",
+    "name":  "Kit de Natal completo (Papai Noel, Rena, Boneco de neve, Urso polar, Árvore, Placa e Bandeja)",
+    "description":  "O kit mais completo para a mesa de Natal: Papai Noel, rena e boneco de neve com efeito tricô, urso polar de gorro, árvore de Natal minimalista, bandeja decorativa e a placa Feliz Natal com floco de neve. Ótimo para presentear.\n\nO KIT INCLUI\n- Papai Noel efeito tricô (cerca de 6 a 7 cm de altura)\n- Rena efeito tricô (cerca de 7 cm de altura)\n- Boneco de neve efeito tricô (cerca de 6 cm de altura)\n- Urso polar com gorro de Natal (cerca de 7 cm de altura)\n- Árvore de Natal minimalista (cerca de 13 cm de altura)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm, 1 cm de altura)\n- Placa Feliz Natal com floco de neve (cerca de 13 x 14 cm, 1,4 cm de espessura)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+    "material":  "PLA",
+    "colors":  [
+                   "#C12E1F",
+                   "#FFFFFF",
+                   "#D8A48B",
+                   "#000000",
+                   "#B5865B",
+                   "#6F5034",
+                   "#FF9016",
+                   "#00AE42",
+                   "#E4BD68"
+               ],
+    "colorText":  "vermelho, branco, pele, preto, caramelo, marrom, laranja, verde e amarelo",
+    "dims":  null,
+    "image":  "img/natal-kit-completo.jpg",
+    "createdAt":  1794540008000
+},
                      {
                          "id":  "natal-mini-jesus-sentado",
                          "catalogId":  "natal",
