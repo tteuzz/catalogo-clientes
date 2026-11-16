@@ -525,7 +525,7 @@ window.CATALOGO = {
     "id":  "natal-bolas-kit4",
     "catalogId":  "natal",
     "name":  "Bolas de Natal modernas (kit com 4)",
-    "description":  "Conjunto com 4 bolas de Natal de desenho moderno, com texturas diferentes em cada uma. Dão um toque contemporâneo para a árvore.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 4 bolas com texturas diferentes\n- Ganchinho dourado para pendurar\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Conjunto com 4 bolas de Natal de desenho moderno, com texturas diferentes em cada uma. Dão um toque contemporâneo para a árvore.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 4 bolas com texturas diferentes\n- Ganchinho dourado para pendurar\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#C12E1F",
@@ -541,7 +541,7 @@ window.CATALOGO = {
     "id":  "natal-presepio-decorativo",
     "catalogId":  "natal",
     "name":  "Presépio decorativo com arco e estrela",
-    "description":  "Presépio completo em peça única, com a Sagrada Família, os Reis Magos, os animais e um arco com estrela de Belém. Textura delicada que lembra cerâmica.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cena completa em peça única\n- Cores: bege (outras cores sob consulta)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Presépio completo em peça única, com a Sagrada Família, os Reis Magos, os animais e um arco com estrela de Belém. Textura delicada que lembra cerâmica.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cena completa em peça única\n- Cores: bege (outras cores sob consulta)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F7E6DE"
@@ -555,7 +555,7 @@ window.CATALOGO = {
     "id":  "natal-arvore-espiral",
     "catalogId":  "natal",
     "name":  "Árvore de Natal espiral canelada",
-    "description":  "Árvore de Natal moderna em formato espiral, com textura canelada que cria lindas sombras. Fica elegante em mesas, aparadores e estantes.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Peça única, sem montagem\n- Cores: verde (outras cores sob consulta)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Árvore de Natal moderna em formato espiral, com textura canelada que cria lindas sombras. Fica elegante em mesas, aparadores e estantes.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Peça única, sem montagem\n- Cores: verde (outras cores sob consulta)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#2E5E3A"
@@ -569,7 +569,7 @@ window.CATALOGO = {
     "id":  "natal-casinha-vela",
     "catalogId":  "natal",
     "name":  "Casinha de Natal para vela",
-    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF"
@@ -583,7 +583,7 @@ window.CATALOGO = {
     "id":  "natal-quebra-nozes",
     "catalogId":  "natal",
     "name":  "Quebra-nozes minimalista",
-    "description":  "Soldadinho quebra-nozes em estilo minimalista japandi, um clássico do Natal com visual moderno. Enviado montado.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 21 cm de altura, montado\n- Cores reais do filamento, sem pintura\n- Cores: vermelho, verde ou bege\n- Peça decorativa (não quebra nozes de verdade)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Soldadinho quebra-nozes em estilo minimalista japandi, um clássico do Natal com visual moderno. Enviado montado.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 21 cm de altura, montado\n- Cores reais do filamento, sem pintura\n- Cores: vermelho, verde ou bege\n- Peça decorativa (não quebra nozes de verdade)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#9D2235"
@@ -597,7 +597,7 @@ window.CATALOGO = {
     "id":  "natal-casinha-card",
     "catalogId":  "natal",
     "name":  "Casinha de Natal decorada",
-    "description":  "Casinha de Natal com detalhes em relevo: coração na fachada, árvore, flocos de neve e boneco de neve. Linda para mesa ou prateleira.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: azul, vermelho ou marrom, com detalhes em branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Casinha de Natal com detalhes em relevo: coração na fachada, árvore, flocos de neve e boneco de neve. Linda para mesa ou prateleira.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: azul, vermelho ou marrom, com detalhes em branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#1F3A93",
@@ -612,7 +612,7 @@ window.CATALOGO = {
     "id":  "natal-vila-velas",
     "catalogId":  "natal",
     "name":  "Vila de Natal para velas (5 casinhas)",
-    "description":  "Vila de Natal com 5 casinhas, uma delas igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 5 casinhas\n- Cabem velas de LED tipo réchaud (não inclusas)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de e7trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Vila de Natal com 5 casinhas, uma delas igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 5 casinhas\n- Cabem velas de LED tipo réchaud (não inclusas)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F2EFE6"
@@ -626,7 +626,7 @@ window.CATALOGO = {
     "id":  "natal-presente-pernas",
     "catalogId":  "natal",
     "name":  "Presente de Natal com perninhas",
-    "description":  "Caixinha de presente com laço e perninhas penduradas, feita para sentar na beirada de prateleiras, estantes e mesas. Divertida e diferente.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Perninhas articuladas que ficam penduradas\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Caixinha de presente com laço e perninhas penduradas, feita para sentar na beirada de prateleiras, estantes e mesas. Divertida e diferente.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Perninhas articuladas que ficam penduradas\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#C12E1F",
@@ -641,7 +641,7 @@ window.CATALOGO = {
     "id":  "natal-bandeja-japandi",
     "catalogId":  "natal",
     "name":  "Bandeja Japandi canelada",
-    "description":  "Bandeja oval com borda canelada em estilo japandi. Serve para montar a mesinha de Natal, organizar velas, chaves ou bijuterias.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: bege, preto ou branco\n- Não indicada para contato direto com alimentos\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Bandeja oval com borda canelada em estilo japandi. Serve para montar a mesinha de Natal, organizar velas, chaves ou bijuterias.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: bege, preto ou branco\n- Não indicada para contato direto com alimentos\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#E6DCCB"
@@ -655,7 +655,7 @@ window.CATALOGO = {
     "id":  "natal-rena-elegante",
     "catalogId":  "natal",
     "name":  "Rena elegante geométrica",
-    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Peça de destaque para aparadores e mesas de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Peça de destaque para aparadores e mesas de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F2EFE6"
@@ -669,7 +669,7 @@ window.CATALOGO = {
     "id":  "natal-alce-trico",
     "catalogId":  "natal",
     "name":  "Alce efeito tricô com cachecol",
-    "description":  "Alce fofinho com textura de tricô, chifres grandes e cachecol. Combina com o Papai Noel, a Rena e o Boneco de neve de tricô.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: marrom, verde ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Alce fofinho com textura de tricô, chifres grandes e cachecol. Combina com o Papai Noel, a Rena e o Boneco de neve de tricô.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: marrom, verde ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#8A6A4F"
@@ -683,7 +683,7 @@ window.CATALOGO = {
     "id":  "natal-arvore-japandi",
     "catalogId":  "natal",
     "name":  "Árvore de Natal japandi canelada",
-    "description":  "Árvore de Natal minimalista com nervuras finas e três níveis, inspirada na decoração japandi. Linda sozinha ou em trio de cores.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 15 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: verde, branco ou terracota\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Árvore de Natal minimalista com nervuras finas e três níveis, inspirada na decoração japandi. Linda sozinha ou em trio de cores.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 15 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: verde, branco ou terracota\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#3F6B48"
@@ -697,7 +697,7 @@ window.CATALOGO = {
     "id":  "natal-contagem-estrela",
     "catalogId":  "natal",
     "name":  "Contagem regressiva para o Natal com estrela",
-    "description":  "Régua de contagem regressiva com os dias de 1 a 24 e uma estrelinha que anda um dia por vez até a árvore de Natal. Ótima para crianças.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Estrela móvel e árvore de Natal no final\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Régua de contagem regressiva com os dias de 1 a 24 e uma estrelinha que anda um dia por vez até a árvore de Natal. Ótima para crianças.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Estrela móvel e árvore de Natal no final\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF",
@@ -713,7 +713,7 @@ window.CATALOGO = {
     "id":  "natal-sino",
     "catalogId":  "natal",
     "name":  "Sino de Natal que toca",
-    "description":  "Sino de Natal moderno com textura canelada e badalo por dentro: ele toca de verdade quando balança. Enfeite lindo para a árvore.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Toca ao balançar\n- Cores: verde, bege ou vinho\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Sino de Natal moderno com textura canelada e badalo por dentro: ele toca de verdade quando balança. Enfeite lindo para a árvore.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Toca ao balançar\n- Cores: verde, bege ou vinho\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#68724D"
@@ -727,7 +727,7 @@ window.CATALOGO = {
     "id":  "natal-tigela-arvore",
     "catalogId":  "natal",
     "name":  "Tigela árvore de Natal empilhável",
-    "description":  "Tigela em formato de árvore de Natal para servir biscoitos, balas e petiscos embalados. Várias juntas formam uma estrela, e dá para empilhar para guardar.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Preço por unidade\n- Cores: vermelho ou verde\n- Para alimentos, use embalados ou forre com papel\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Tigela em formato de árvore de Natal para servir biscoitos, balas e petiscos embalados. Várias juntas formam uma estrela, e dá para empilhar para guardar.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Preço por unidade\n- Cores: vermelho ou verde\n- Para alimentos, use embalados ou forre com papel\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#C12E1F"
@@ -741,7 +741,7 @@ window.CATALOGO = {
     "id":  "natal-anjo-vela",
     "catalogId":  "natal",
     "name":  "Anjo luminária em malha",
-    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF",
@@ -756,7 +756,7 @@ window.CATALOGO = {
     "id":  "natal-chapeu-tigela",
     "catalogId":  "natal",
     "name":  "Gorro de Papai Noel porta-doces",
-    "description":  "Gorro de Papai Noel moderno e canelado que vira pote: a parte de cima é a tampa. Decora a mesa e ainda guarda doces e chocolates embalados.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 17 cm de altura\n- Cores reais do filamento, sem pintura\n- Tampa removível\n- Para alimentos, use embalados\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de e7trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Gorro de Papai Noel moderno e canelado que vira pote: a parte de cima é a tampa. Decora a mesa e ainda guarda doces e chocolates embalados.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 17 cm de altura\n- Cores reais do filamento, sem pintura\n- Tampa removível\n- Para alimentos, use embalados\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#9D2235",
@@ -771,7 +771,7 @@ window.CATALOGO = {
     "id":  "natal-gnomo-boneco-rena",
     "catalogId":  "natal",
     "name":  "Trio de Natal: gnomo, boneco de neve e rena",
-    "description":  "Conjunto com 3 enfeites canelados: gnomo de gorro vermelho, boneco de neve com cachecol e rena com chifres. Decoração aconchegante para a mesa.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 3 peças: gnomo, boneco de neve e rena\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de e5trega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Conjunto com 3 enfeites canelados: gnomo de gorro vermelho, boneco de neve com cachecol e rena com chifres. Decoração aconchegante para a mesa.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 3 peças: gnomo, boneco de neve e rena\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#C12E1F",
