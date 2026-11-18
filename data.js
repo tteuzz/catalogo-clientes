@@ -741,7 +741,7 @@ window.CATALOGO = {
     "id":  "natal-anjo-vela",
     "catalogId":  "natal",
     "name":  "Anjo luminária em malha",
-    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF",
