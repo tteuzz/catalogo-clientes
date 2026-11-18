@@ -597,13 +597,11 @@ window.CATALOGO = {
 {
     "id":  "natal-quebra-nozes",
     "catalogId":  "natal",
-    "name":  "Quebra-nozes minimalista",
-    "description":  "Soldadinho quebra-nozes em estilo minimalista japandi, um clássico do Natal com visual moderno. Enviado montado.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 21 cm de altura, montado\n- Cores reais do filamento, sem pintura\n- Cores: vermelho, verde ou bege\n- Peça decorativa (não quebra nozes de verdade)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "name":  "Quebra-nozes de Natal",
+    "description":  "Soldadinho quebra-nozes em estilo japandi, um clássico do Natal com visual moderno. Escolha o modelo minimalista (liso) ou o ripado. Enviado montado.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 21 cm de altura, montado\n- Cores reais do filamento, sem pintura\n- Modelos: minimalista (liso) ou ripado\n- Cores: branco, vermelho, verde, bege ou marrom\n- Peça decorativa (não quebra nozes de verdade)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
-    "colors":  [
-                   "#9D2235"
-               ],
-    "colorText":  "vermelho",
+    "colors":  ["#FFFFFF", "#9D2235", "#5E7F68", "#E4D3B5", "#6F5034"],
+    "colorText":  "branco, vermelho, verde, bege ou marrom",
     "dims":  null,
     "gallery":  ["img/natal-quebra-nozes-g1.jpg", "img/natal-quebra-nozes-g2.jpg", "img/natal-quebra-nozes-g3.jpg", "img/natal-quebra-nozes-g4.jpg", "img/natal-quebra-nozes-g5.jpg"],
     "image":  "img/natal-quebra-nozes.jpg",
