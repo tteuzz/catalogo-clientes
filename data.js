@@ -611,8 +611,8 @@ window.CATALOGO = {
 {
     "id":  "natal-vila-velas",
     "catalogId":  "natal",
-    "name":  "Vila de Natal para velas (5 casinhas)",
-    "description":  "Vila de Natal com 5 casinhas, uma delas igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- 5 casinhas\n- Cabem velas de LED tipo réchaud (não inclusas)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "name":  "Vila de Natal para velas",
+    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Cabem velas de LED tipo réchaud (não inclusas)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F2EFE6"
@@ -655,7 +655,7 @@ window.CATALOGO = {
     "id":  "natal-rena-elegante",
     "catalogId":  "natal",
     "name":  "Rena elegante geométrica",
-    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Peça de destaque para aparadores e mesas de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Peça de destaque para aparadores e mesas de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 17,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F2EFE6"
@@ -664,6 +664,18 @@ window.CATALOGO = {
     "dims":  null,
     "image":  "img/natal-rena-elegante.jpg",
     "createdAt":  1794860010000
+},
+{
+    "id":  "natal-rena-elegante-pequena",
+    "catalogId":  "natal",
+    "name":  "Rena elegante geométrica pequena",
+    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Versão menor, ótima para mesas e nichos ou para fazer par com a rena grande.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 14 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "material":  "PLA",
+    "colors":  ["#F2EFE6"],
+    "colorText":  "marfim",
+    "dims":  null,
+    "image":  "img/natal-rena-elegante-pequena.jpg",
+    "createdAt":  1795046400000
 },
 {
     "id":  "natal-alce-trico",

@@ -29,7 +29,8 @@ natal-arvore-espiral;Árvore de Natal espiral canelada;10,99
 natal-casinha-vela;Casinha de Natal para vela;16,99
 natal-quebra-nozes;Quebra-nozes minimalista;14,99
 natal-casinha-card;Casinha de Natal decorada;13,99
-natal-vila-velas;Vila de Natal para velas (5 casinhas);44,99
+natal-vila-velas;Vila de Natal para velas (preço com 5 casinhas);32,99
+natal-vila-velas:casa;Vila de Natal - cada casinha a mais ou a menos;7,00
 natal-presente-pernas;Presente de Natal com perninhas;10,99
 natal-bandeja-japandi;Bandeja Japandi canelada;9,99
 natal-rena-elegante;Rena elegante geométrica;17,99
@@ -41,3 +42,4 @@ natal-tigela-arvore;Tigela árvore de Natal empilhável;8,99
 natal-anjo-vela;Anjo luminária em malha;19,99
 natal-chapeu-tigela;Gorro de Papai Noel porta-doces;35,99
 natal-gnomo-boneco-rena;Trio de Natal: gnomo, boneco de neve e rena;23,99
+natal-rena-elegante-pequena;Rena elegante geométrica pequena;11,99
