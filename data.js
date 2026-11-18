@@ -65,7 +65,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "verde, marrom e amarelo",
                          "dims":  null,
-                         "image":  "img/natal-arvore-minimalista.webp",
+    "gallery":  ["img/natal-arvore-minimalista-g1.jpg", "img/natal-arvore-minimalista-g2.jpg", "img/natal-arvore-minimalista-g3.jpg"],
+    "image":  "img/natal-arvore-minimalista.webp",
                          "createdAt":  1794332000005
                      },
                      {
@@ -83,7 +84,7 @@ window.CATALOGO = {
                                       203.6,
                                       9.6
                                   ],
-                         "image":  "img/natal-bandeja.jpg",
+    "image":  "img/natal-bandeja.jpg",
                          "createdAt":  1794332000010
                      },
                      {
@@ -100,7 +101,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "branco, vermelho, preto e laranja",
                          "dims":  null,
-                         "image":  "img/natal-boneco-de-neve.webp",
+    "gallery":  ["img/natal-boneco-de-neve-g1.jpg", "img/natal-boneco-de-neve-g2.jpg", "img/natal-boneco-de-neve-g3.jpg", "img/natal-boneco-de-neve-g4.jpg"],
+    "image":  "img/natal-boneco-de-neve.webp",
                          "createdAt":  1794332000002
                      },
                      {
@@ -118,7 +120,7 @@ window.CATALOGO = {
                                       16.7,
                                       56.4
                                   ],
-                         "image":  "img/natal-cadeira-mini-jesus.webp",
+    "image":  "img/natal-cadeira-mini-jesus.webp",
                          "createdAt":  1794333500002
                      },
                      {
@@ -138,7 +140,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "vermelho, verde, marrom e branco",
                          "dims":  null,
-                         "image":  "img/natal-calendario-lareira.webp",
+    "gallery":  ["img/natal-calendario-lareira-g1.jpg", "img/natal-calendario-lareira-g2.jpg", "img/natal-calendario-lareira-g3.jpg", "img/natal-calendario-lareira-g4.jpg", "img/natal-calendario-lareira-g5.jpg"],
+    "image":  "img/natal-calendario-lareira.webp",
                          "createdAt":  1794332000009
                      },
                      {
@@ -155,7 +158,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "marrom, pele, branco e preto",
                          "dims":  null,
-                         "image":  "img/natal-jesus-trico.webp",
+    "gallery":  ["img/natal-jesus-trico-g1.jpg", "img/natal-jesus-trico-g2.jpg", "img/natal-jesus-trico-g3.jpg", "img/natal-jesus-trico-g4.jpg"],
+    "image":  "img/natal-jesus-trico.webp",
                          "createdAt":  1794333500003
                      },
                      {
@@ -176,7 +180,7 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "vermelho, branco, verde, caramelo, marrom e preto",
                          "dims":  null,
-                         "image":  "img/natal-kit-bandeja.webp",
+    "image":  "img/natal-kit-bandeja.webp",
                          "createdAt":  1794444000000
                      },
                      {
@@ -197,7 +201,7 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "vermelho, branco, verde, caramelo, marrom e preto",
                          "dims":  null,
-                         "image":  "img/natal-kit-bandeja-placa.jpg",
+    "image":  "img/natal-kit-bandeja-placa.jpg",
                          "createdAt":  1794530000000
                      },
 {
@@ -416,7 +420,8 @@ window.CATALOGO = {
                                       123.9,
                                       130
                                   ],
-                         "image":  "img/natal-nossa-senhora-terco.webp",
+    "gallery":  ["img/natal-nossa-senhora-terco-g1.jpg", "img/natal-nossa-senhora-terco-g2.jpg", "img/natal-nossa-senhora-terco-g3.jpg", "img/natal-nossa-senhora-terco-g4.jpg", "img/natal-nossa-senhora-terco-g5.jpg", "img/natal-nossa-senhora-terco-g6.jpg"],
+    "image":  "img/natal-nossa-senhora-terco.webp",
                          "createdAt":  1794332000007
                      },
                      {
@@ -433,7 +438,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "vermelho, branco, pele e preto",
                          "dims":  null,
-                         "image":  "img/natal-papai-noel-trico.webp",
+    "gallery":  ["img/natal-papai-noel-trico-g1.jpg", "img/natal-papai-noel-trico-g2.jpg", "img/natal-papai-noel-trico-g3.jpg", "img/natal-papai-noel-trico-g4.jpg"],
+    "image":  "img/natal-papai-noel-trico.webp",
                          "createdAt":  1794332000001
                      },
                      {
@@ -451,7 +457,8 @@ window.CATALOGO = {
                                       140.4,
                                       13.6
                                   ],
-                         "image":  "img/natal-placa-feliz-natal.webp",
+    "gallery":  ["img/natal-placa-feliz-natal-g1.jpg", "img/natal-placa-feliz-natal-g2.jpg", "img/natal-placa-feliz-natal-g3.jpg"],
+    "image":  "img/natal-placa-feliz-natal.webp",
                          "createdAt":  1794332000008
                      },
                      {
@@ -469,7 +476,8 @@ window.CATALOGO = {
                                       80.3,
                                       115
                                   ],
-                         "image":  "img/natal-presepio-minimalista.webp",
+    "gallery":  ["img/natal-presepio-minimalista-g1.jpg", "img/natal-presepio-minimalista-g2.jpg", "img/natal-presepio-minimalista-g3.jpg"],
+    "image":  "img/natal-presepio-minimalista.webp",
                          "createdAt":  1794332000006
                      },
                      {
@@ -486,7 +494,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "caramelo, marrom, preto e vermelho",
                          "dims":  null,
-                         "image":  "img/natal-rena-trico.webp",
+    "gallery":  ["img/natal-rena-trico-g1.jpg", "img/natal-rena-trico-g2.jpg"],
+    "image":  "img/natal-rena-trico.webp",
                          "createdAt":  1794332000003
                      },
                      {
@@ -502,7 +511,7 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "verde, branco e vermelho",
                          "dims":  null,
-                         "image":  "img/natal-suporte-parede-grinch.webp",
+    "image":  "img/natal-suporte-parede-grinch.webp",
                          "createdAt":  1794332000011
                      },
                      {
@@ -518,7 +527,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "branco, vermelho e preto",
                          "dims":  null,
-                         "image":  "img/natal-urso-polar.webp",
+    "gallery":  ["img/natal-urso-polar-g1.jpg", "img/natal-urso-polar-g2.jpg", "img/natal-urso-polar-g3.jpg", "img/natal-urso-polar-g4.jpg"],
+    "image":  "img/natal-urso-polar.webp",
                          "createdAt":  1794332000004
                      },
 {
@@ -534,6 +544,7 @@ window.CATALOGO = {
                ],
     "colorText":  "vermelho, verde e dourado",
     "dims":  null,
+    "gallery":  ["img/natal-bolas-kit4-g1.jpg", "img/natal-bolas-kit4-g2.jpg", "img/natal-bolas-kit4-g3.jpg", "img/natal-bolas-kit4-g4.jpg", "img/natal-bolas-kit4-g5.jpg", "img/natal-bolas-kit4-g6.jpg"],
     "image":  "img/natal-bolas-kit4.jpg",
     "createdAt":  1794860001000
 },
@@ -548,6 +559,7 @@ window.CATALOGO = {
                ],
     "colorText":  "bege",
     "dims":  null,
+    "gallery":  ["img/natal-presepio-decorativo-g1.jpg", "img/natal-presepio-decorativo-g2.jpg", "img/natal-presepio-decorativo-g3.jpg", "img/natal-presepio-decorativo-g4.jpg", "img/natal-presepio-decorativo-g5.jpg", "img/natal-presepio-decorativo-g6.jpg"],
     "image":  "img/natal-presepio-decorativo.jpg",
     "createdAt":  1794860002000
 },
@@ -562,6 +574,7 @@ window.CATALOGO = {
                ],
     "colorText":  "verde",
     "dims":  null,
+    "gallery":  ["img/natal-arvore-espiral-g1.jpg", "img/natal-arvore-espiral-g2.jpg", "img/natal-arvore-espiral-g3.jpg", "img/natal-arvore-espiral-g4.jpg", "img/natal-arvore-espiral-g5.jpg", "img/natal-arvore-espiral-g6.jpg"],
     "image":  "img/natal-arvore-espiral.jpg",
     "createdAt":  1794860003000
 },
@@ -569,13 +582,14 @@ window.CATALOGO = {
     "id":  "natal-casinha-vela",
     "catalogId":  "natal",
     "name":  "Casinha de Natal para vela",
-    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF"
                ],
     "colorText":  "branco",
     "dims":  null,
+    "gallery":  ["img/natal-casinha-vela-g1.jpg", "img/natal-casinha-vela-g2.jpg", "img/natal-casinha-vela-g3.jpg", "img/natal-casinha-vela-g4.jpg", "img/natal-casinha-vela-g5.jpg"],
     "image":  "img/natal-casinha-vela.jpg",
     "createdAt":  1794860004000
 },
@@ -590,6 +604,7 @@ window.CATALOGO = {
                ],
     "colorText":  "vermelho",
     "dims":  null,
+    "gallery":  ["img/natal-quebra-nozes-g1.jpg", "img/natal-quebra-nozes-g2.jpg", "img/natal-quebra-nozes-g3.jpg", "img/natal-quebra-nozes-g4.jpg", "img/natal-quebra-nozes-g5.jpg"],
     "image":  "img/natal-quebra-nozes.jpg",
     "createdAt":  1794860005000
 },
@@ -605,6 +620,7 @@ window.CATALOGO = {
                ],
     "colorText":  "azul e branco",
     "dims":  null,
+    "gallery":  ["img/natal-casinha-card-g1.jpg", "img/natal-casinha-card-g2.jpg", "img/natal-casinha-card-g3.jpg", "img/natal-casinha-card-g4.jpg", "img/natal-casinha-card-g5.jpg", "img/natal-casinha-card-g6.jpg"],
     "image":  "img/natal-casinha-card.jpg",
     "createdAt":  1794860006000
 },
@@ -612,13 +628,14 @@ window.CATALOGO = {
     "id":  "natal-vila-velas",
     "catalogId":  "natal",
     "name":  "Vila de Natal para velas",
-    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Cabem velas de LED tipo réchaud (não inclusas)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Acompanha 1 vela de LED tipo réchaud por casinha (já inclusas no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F2EFE6"
                ],
     "colorText":  "marfim",
     "dims":  null,
+    "gallery":  ["img/natal-vila-velas-g1.jpg", "img/natal-vila-velas-g2.jpg", "img/natal-vila-velas-g3.jpg"],
     "image":  "img/natal-vila-velas.jpg",
     "createdAt":  1794860007000
 },
@@ -634,6 +651,7 @@ window.CATALOGO = {
                ],
     "colorText":  "vermelho e branco",
     "dims":  null,
+    "gallery":  ["img/natal-presente-pernas-g1.jpg", "img/natal-presente-pernas-g2.jpg", "img/natal-presente-pernas-g3.jpg", "img/natal-presente-pernas-g4.jpg", "img/natal-presente-pernas-g5.jpg", "img/natal-presente-pernas-g6.jpg"],
     "image":  "img/natal-presente-pernas.jpg",
     "createdAt":  1794860008000
 },
@@ -648,6 +666,7 @@ window.CATALOGO = {
                ],
     "colorText":  "bege",
     "dims":  null,
+    "gallery":  ["img/natal-bandeja-japandi-g1.jpg", "img/natal-bandeja-japandi-g2.jpg", "img/natal-bandeja-japandi-g3.jpg"],
     "image":  "img/natal-bandeja-japandi.jpg",
     "createdAt":  1794860009000
 },
@@ -662,6 +681,7 @@ window.CATALOGO = {
                ],
     "colorText":  "marfim",
     "dims":  null,
+    "gallery":  ["img/natal-rena-elegante-g1.jpg", "img/natal-rena-elegante-g2.jpg", "img/natal-rena-elegante-g3.jpg", "img/natal-rena-elegante-g4.jpg", "img/natal-rena-elegante-g5.jpg", "img/natal-rena-elegante-g6.jpg"],
     "image":  "img/natal-rena-elegante.jpg",
     "createdAt":  1794860010000
 },
@@ -674,6 +694,7 @@ window.CATALOGO = {
     "colors":  ["#F2EFE6"],
     "colorText":  "marfim",
     "dims":  null,
+    "gallery":  ["img/natal-rena-elegante-pequena-g1.jpg", "img/natal-rena-elegante-pequena-g2.jpg", "img/natal-rena-elegante-pequena-g3.jpg"],
     "image":  "img/natal-rena-elegante-pequena.jpg",
     "createdAt":  1795046400000
 },
@@ -688,6 +709,7 @@ window.CATALOGO = {
                ],
     "colorText":  "marrom",
     "dims":  null,
+    "gallery":  ["img/natal-alce-trico-g1.jpg", "img/natal-alce-trico-g2.jpg", "img/natal-alce-trico-g3.jpg"],
     "image":  "img/natal-alce-trico.jpg",
     "createdAt":  1794860011000
 },
@@ -702,6 +724,7 @@ window.CATALOGO = {
                ],
     "colorText":  "verde",
     "dims":  null,
+    "gallery":  ["img/natal-arvore-japandi-g1.jpg", "img/natal-arvore-japandi-g2.jpg", "img/natal-arvore-japandi-g3.jpg"],
     "image":  "img/natal-arvore-japandi.jpg",
     "createdAt":  1794860012000
 },
@@ -718,6 +741,7 @@ window.CATALOGO = {
                ],
     "colorText":  "branco, verde e amarelo",
     "dims":  null,
+    "gallery":  ["img/natal-contagem-estrela-g1.jpg", "img/natal-contagem-estrela-g2.jpg", "img/natal-contagem-estrela-g3.jpg", "img/natal-contagem-estrela-g4.jpg", "img/natal-contagem-estrela-g5.jpg", "img/natal-contagem-estrela-g6.jpg"],
     "image":  "img/natal-contagem-estrela.jpg",
     "createdAt":  1794860013000
 },
@@ -732,6 +756,7 @@ window.CATALOGO = {
                ],
     "colorText":  "verde",
     "dims":  null,
+    "gallery":  ["img/natal-sino-g1.jpg", "img/natal-sino-g2.jpg", "img/natal-sino-g3.jpg", "img/natal-sino-g4.jpg"],
     "image":  "img/natal-sino.jpg",
     "createdAt":  1794860014000
 },
@@ -746,6 +771,7 @@ window.CATALOGO = {
                ],
     "colorText":  "vermelho",
     "dims":  null,
+    "gallery":  ["img/natal-tigela-arvore-g1.jpg", "img/natal-tigela-arvore-g2.jpg", "img/natal-tigela-arvore-g3.jpg"],
     "image":  "img/natal-tigela-arvore.jpg",
     "createdAt":  1794860015000
 },
@@ -753,7 +779,7 @@ window.CATALOGO = {
     "id":  "natal-anjo-vela",
     "catalogId":  "natal",
     "name":  "Anjo luminária em malha",
-    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF",
@@ -761,6 +787,7 @@ window.CATALOGO = {
                ],
     "colorText":  "branco e dourado",
     "dims":  null,
+    "gallery":  ["img/natal-anjo-vela-g1.jpg", "img/natal-anjo-vela-g2.jpg", "img/natal-anjo-vela-g3.jpg", "img/natal-anjo-vela-g4.jpg"],
     "image":  "img/natal-anjo-vela.jpg",
     "createdAt":  1794860016000
 },
@@ -776,6 +803,7 @@ window.CATALOGO = {
                ],
     "colorText":  "vermelho e branco",
     "dims":  null,
+    "gallery":  ["img/natal-chapeu-tigela-g1.jpg", "img/natal-chapeu-tigela-g2.jpg", "img/natal-chapeu-tigela-g3.jpg", "img/natal-chapeu-tigela-g4.jpg"],
     "image":  "img/natal-chapeu-tigela.jpg",
     "createdAt":  1794860017000
 },
@@ -792,6 +820,7 @@ window.CATALOGO = {
                ],
     "colorText":  "vermelho, branco e bege",
     "dims":  null,
+    "gallery":  ["img/natal-gnomo-boneco-rena-g1.jpg", "img/natal-gnomo-boneco-rena-g2.jpg", "img/natal-gnomo-boneco-rena-g3.jpg", "img/natal-gnomo-boneco-rena-g4.jpg", "img/natal-gnomo-boneco-rena-g5.jpg", "img/natal-gnomo-boneco-rena-g6.jpg"],
     "image":  "img/natal-gnomo-boneco-rena.jpg",
     "createdAt":  1794860018000
 }

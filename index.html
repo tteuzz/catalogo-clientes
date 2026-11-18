@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://tteuzz.github.io/catalogo-clientes/img/natal-kit-completo.jpg">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<script src="data.js?v=14"></script>
+<script src="data.js?v=15"></script>
 
 <meta name="theme-color" content="#0E6E64">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,6 +112,13 @@ select.sel{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--l
 .hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:20px;align-items:start}
 @media (max-width:720px){.hero{grid-template-columns:minmax(0,1fr)}}
 .hero .thumb{border-radius:10px;border:1px solid var(--line)}
+.gal{display:flex;flex-direction:column;gap:8px;min-width:0}
+.gal-strip{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
+.gal-t{all:unset;cursor:pointer;flex:0 0 56px;height:56px;border-radius:6px;overflow:hidden;border:2px solid transparent;opacity:.7;box-sizing:border-box}
+.gal-t img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-t.on{border-color:var(--accent);opacity:1}
+.gal-t:hover{opacity:1}
+.gal-t:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:1px}
 .hero-info{display:flex;flex-direction:column;gap:12px;min-width:0}
 .prod-name{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,30px);line-height:1.1;letter-spacing:-.015em;margin:0;text-wrap:balance}
 .pricebox{border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));background:color-mix(in srgb,var(--accent) 7%,var(--surface));border-radius:10px;padding:12px 14px}
@@ -346,6 +353,7 @@ function openDetail(id){ const was=openId; openId=id; renderDetail(); $('ov').hi
 function closeDetail(fromNav){ openId=null; $("ov").hidden=true; if($("bagOv").hidden) document.body.style.overflow=""; if(!fromNav&&/^#p=/.test(location.hash)){ if(pushed){ pushed=false; history.back(); } else history.replaceState(null,"",pageUrl()); } }
 function renderDetail(){
   const p=byId(openId); if(!p) return closeDetail();
+  const G=[p.image,...(p.gallery||[])].filter(Boolean);
   const vv=VAR[p.id]; if(vv&&!(DN[p.id]>=vv.min&&DN[p.id]<=vv.max)) DN[p.id]=vv.def;
   const dn=vv?DN[p.id]:null, key=vv?p.id+'@'+dn:p.id;
   const cat=D.catalogs.find(c=>c.id===p.catalogId), v=priceOf(p,dn), q=qtyOf(key), sv=kitSave(p), sep=kitSeparate(p), pz=prazo(p), parts=kitParts(p);
@@ -355,7 +363,8 @@ function renderDetail(){
   '<div class="sheet-head"><span class="tag" style="color:'+(cat?(CAT[cat.color]||CAT.teal):'inherit')+'">'+esc(cat?cat.name:'')+'</span>'+
     '<div class="head-actions"><button class="x" type="button" id="dShare" aria-label="Compartilhar este produto" title="Compartilhar">'+SHARE_SVG+'</button><button class="x" id="dClose" type="button" aria-label="Fechar">×</button></div></div>'+
   '<div class="sheet-body">'+
-    '<section class="hero"><div class="thumb">'+img(p)+'</div>'+
+    '<section class="hero"><div class="gal"><div class="thumb" id="dMain">'+img(p)+'</div>'+
+      (G.length>1?'<div class="gal-strip" role="group" aria-label="Fotos do produto">'+G.map((s,i)=>'<button type="button" class="gal-t'+(i?'':' on')+'" data-g="'+i+'" aria-label="Foto '+(i+1)+' de '+G.length+'" aria-pressed="'+(!i)+'"><img src="'+esc(s)+'" alt="" loading="lazy" decoding="async"></button>').join('')+'</div>':'')+'</div>'+
       '<div class="hero-info"><h2 class="prod-name" id="dTitle">'+esc(p.name)+'</h2>'+
         '<div class="pricebox"><small>'+T.priceLong+(vv?' · '+dn+' '+esc(vv.many):'')+'</small><div class="big">'+(v?'<span>R$ </span>'+NUM(v):'Consulte')+'</div>'+
           (sv?'<div class="savenote">Comprando as peças separadas: '+BRL(sep)+'. No kit você economiza '+BRL(sv)+'.</div>':'')+'</div>'+
@@ -388,6 +397,7 @@ function renderDetail(){
   if($('dSeeBag')) $('dSeeBag').onclick=openBag;
   $('detail').querySelectorAll('[data-open]').forEach(el=>el.onclick=()=>go(el.dataset.open));
   $('dClose').onclick=()=>closeDetail();
+  $('detail').querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{ $('dMain').querySelector('img').src=G[+b.dataset.g]; $('detail').querySelectorAll('[data-g]').forEach(x=>{ x.classList.toggle('on',x===b); x.setAttribute('aria-pressed',x===b); }); });
   $('dShare').onclick=async()=>{ const url=pageUrl()+'#p='+encodeURIComponent(p.id), text=p.name+(v?' — '+BRL(v):'');
     try{ if(navigator.share){ await navigator.share({title:p.name,text,url}); return; } }catch(e){ if(e&&e.name==='AbortError') return; }
     try{ await navigator.clipboard.writeText(url); toast('Link copiado'); }catch(e){ prompt('Copie o link:',url); } };
