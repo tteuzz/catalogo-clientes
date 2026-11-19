@@ -177,6 +177,8 @@ footer a{color:var(--accent)}
 .bagitem .stepper{min-height:36px;flex:none;width:112px}
 .bagitem .stepper button{width:34px}
 .total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--f-display);font-weight:800;font-size:22px;padding-top:4px}
+.subt{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+select.sel{width:100%}
 label.fl{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:var(--muted)}
 label.fl input,label.fl textarea{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;resize:vertical}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 86px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:8px;font-size:14px;z-index:60;box-shadow:0 6px 20px rgba(0,0,0,.2)}
@@ -219,6 +221,10 @@ label.fl input,label.fl textarea{font:inherit;font-size:16px;font-weight:400;col
 <script>
 const MODE="revenda";
 const PHONE='5511954023947';
+/* pagamento online (Mercado Pago, via Cloudflare Worker). Vazio = só pedido pelo WhatsApp */
+const CHECKOUT_URL='https://catalogo-checkout.auditoredigitalsolutions.workers.dev';
+const FRETE={sp:{label:'São Paulo (SP)',cost:13}};
+const PAY=MODE==='vitrine'&&!!CHECKOUT_URL;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const BRL=v=>(isFinite(v)?v:0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
@@ -324,8 +330,12 @@ function orderText(lines, extra){
   const tot=lines.reduce((a,x)=>a+priceOf(x.p,x.n)*x.q,0);
   let t=T.orderHead+'\n\n'+L.join('\n')+(tot?'\n\nTotal: '+BRL(tot):'');
   if(extra&&extra.name) t+='\n\nNome: '+extra.name;
+  if(extra&&extra.phone) t+='\nWhatsApp: '+extra.phone;
+  if(extra&&extra.addr) t+='\nEndereço: '+extra.addr+(extra.cep?' — CEP '+extra.cep:'');
   if(extra&&extra.city) t+='\nCidade: '+extra.city;
+  if(extra&&extra.ship) t+='\nEntrega: '+(FRETE[extra.ship]?FRETE[extra.ship].label+' — frete '+BRL(FRETE[extra.ship].cost):'fora de SP, frete a combinar');
   if(extra&&extra.obs) t+='\nObservações: '+extra.obs;
+  if(extra&&extra.paid) t+='\n\nPedido '+extra.paid+' pago pelo site (Mercado Pago).';
   return t+'\n\nCatálogo: '+pageUrl();
 }
 function oneText(p,q,n){ return orderText([{p,q:q||1,n:n==null?null:n}]).replace(T.orderHead, REV?'Olá! Sou revendedor e tenho interesse em:':'Olá! Tenho interesse em:')+'\nPode me passar cores e prazo?'; }
@@ -443,21 +453,65 @@ function renderBagSheet(){
   $('bag').innerHTML='<div class="sheet-head"><span class="t" id="bTitle">Seu pedido</span><button class="x" id="bClose" type="button" aria-label="Fechar">×</button></div>'+
   '<div class="sheet-body">'+
    (L.length?'<div>'+L.map(x=>{ const v=priceOf(x.p,x.n); return '<div class="bagitem">'+img(x.p,false)+'<div><div class="nm">'+esc(varName(x.p,x.n))+'</div><div class="pr">'+(v?BRL(v)+' cada'+(x.q>1?' · '+BRL(v*x.q):''):'Preço a combinar')+'</div></div>'+stepper(x.k,x.q,varName(x.p,x.n))+'</div>'; }).join('')+'</div>'+
-     '<div class="total"><span>Total</span><span>'+(tot?BRL(tot):'A combinar')+'</span></div>'+
+     (PAY?'<div class="subt"><span>Produtos</span><span>'+BRL(tot)+'</span></div><div class="subt" id="bFreteRow"><span>Frete</span><span id="bFrete"></span></div>':'')+
+     '<div class="total"><span>Total</span><span id="bTot">'+(tot?BRL(tot):'A combinar')+'</span></div>'+
      '<label class="fl">Seu nome<input id="fName" autocomplete="name" value="'+esc(EXTRA.name||'')+'"></label>'+
+     (PAY?'<label class="fl">WhatsApp (com DDD)<input id="fPhone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="11 91234-5678" value="'+esc(EXTRA.phone||'')+'"></label>'+
+       '<label class="fl">Entrega<select id="fShip" class="sel">'+Object.keys(FRETE).map(k=>'<option value="'+k+'">'+esc(FRETE[k].label)+' — frete '+BRL(FRETE[k].cost)+'</option>').join('')+'<option value="outro">Outro estado — frete combinado no WhatsApp</option></select></label>'+
+       '<label class="fl">CEP<input id="fCep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" value="'+esc(EXTRA.cep||'')+'"></label>'+
+       '<label class="fl">Endereço (rua, número, complemento e bairro)<input id="fAddr" autocomplete="street-address" value="'+esc(EXTRA.addr||'')+'"></label>':'')+
      '<label class="fl">Cidade<input id="fCity" autocomplete="address-level2" value="'+esc(EXTRA.city||'')+'"></label>'+
      '<label class="fl">Observações (cores, data, retirada…)<textarea id="fObs" rows="3">'+esc(EXTRA.obs||'')+'</textarea></label>'+
+     (PAY?'<button class="btn lg" type="button" id="bPay">Pagar com Pix ou cartão</button><p class="note" id="bPayNote" style="margin:0"></p>':'')+
      '<a class="btn wa lg" id="bSend" target="_blank" rel="noopener">'+WA_SVG+'Enviar pedido pelo WhatsApp</a>'+
      '<button class="btn plain" type="button" id="bClear">Esvaziar pedido</button>'+
-     '<p class="note" style="margin:0">O pedido só é confirmado depois da conversa no WhatsApp. Cores, prazo e entrega são combinados por lá.</p>'
+     '<p class="note" style="margin:0">'+(PAY?'Pagando pelo site, o pedido já entra na fila de produção. Pelo WhatsApp, cores, prazo e entrega são combinados na conversa.':'O pedido só é confirmado depois da conversa no WhatsApp. Cores, prazo e entrega são combinados por lá.')+'</p>'
    :'<div class="empty">Seu pedido está vazio. Toque em <b>Adicionar</b> nos produtos para montar a lista.</div>')+
   '</div>';
   $('bClose').onclick=closeBag;
   bindSteppers($('bag'));
   if(!L.length) return;
-  const sync=()=>{ EXTRA={name:$('fName').value.trim(),city:$('fCity').value.trim(),obs:$('fObs').value.trim()}; try{ localStorage.setItem(T.key+'-dados',JSON.stringify(EXTRA)); }catch(e){} $('bSend').href=waLink(orderText(bagLines(),EXTRA)); };
-  ['fName','fCity','fObs'].forEach(i=>$(i).addEventListener('input',sync)); sync();
+  if(PAY&&EXTRA.ship) $('fShip').value=FRETE[EXTRA.ship]||EXTRA.ship==='outro'?EXTRA.ship:'sp';
+  const sync=()=>{ EXTRA={name:$('fName').value.trim(),city:$('fCity').value.trim(),obs:$('fObs').value.trim()};
+    if(PAY){ Object.assign(EXTRA,{phone:$('fPhone').value.trim(),cep:$('fCep').value.trim(),addr:$('fAddr').value.trim(),ship:$('fShip').value});
+      const f=FRETE[EXTRA.ship]; $('bFrete').textContent=f?BRL(f.cost):'a combinar'; $('bTot').textContent=f?BRL(tot+f.cost):BRL(tot)+' + frete';
+      $('bPay').hidden=!f; $('bPayNote').textContent=f?'Você vai para a página segura do Mercado Pago. Pix ou cartão em até 6x.':''; }
+    try{ localStorage.setItem(T.key+'-dados',JSON.stringify(EXTRA)); }catch(e){} $('bSend').href=waLink(orderText(bagLines(),EXTRA)); };
+  ['fName','fCity','fObs','fPhone','fCep','fAddr'].forEach(i=>{ if($(i)) $(i).addEventListener('input',sync); }); if(PAY) $('fShip').addEventListener('change',sync); sync();
+  if(PAY) $('bPay').onclick=pay;
   $('bClear').onclick=()=>{ if(confirm('Tirar todos os itens do pedido?')){ BAG={}; saveBag(); render(); renderBag(); renderBagSheet(); } };
+}
+
+/* pagamento online */
+async function pay(){
+  const b=$('bPay'), note=$('bPayNote'), E=EXTRA, digits=s=>(s||'').replace(/\D/g,'');
+  const miss=[]; if(!E.name) miss.push('nome'); if(digits(E.phone).length<10) miss.push('WhatsApp com DDD'); if(digits(E.cep).length!==8) miss.push('CEP'); if(!E.addr) miss.push('endereço');
+  if(miss.length){ note.textContent='Preencha: '+miss.join(', ')+'.'; return; }
+  b.disabled=true; b.textContent='Abrindo o pagamento…'; note.textContent='';
+  try{
+    const items=bagLines().map(x=>({id:x.p.id,n:x.n,q:x.q}));
+    const r=await fetch(CHECKOUT_URL.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items,ship:E.ship,buyer:{name:E.name,phone:digits(E.phone),cep:digits(E.cep),address:E.addr,city:E.city,obs:E.obs}})});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||!j.url) throw new Error(j.error||'Não foi possível abrir o pagamento.');
+    try{ localStorage.setItem(T.key+'-pago',JSON.stringify({ref:j.ref,text:orderText(bagLines(),Object.assign({},E,{paid:j.ref}))})); }catch(e){}
+    location.href=j.url;
+  }catch(e){ b.disabled=false; b.textContent='Pagar com Pix ou cartão'; note.textContent=(e.message||'Erro.')+' Se preferir, envie o pedido pelo WhatsApp.'; }
+}
+function payReturn(){
+  const qs=new URLSearchParams(location.search), st=qs.get('pg'); if(!st) return;
+  let saved={}; try{ saved=JSON.parse(localStorage.getItem(T.key+'-pago')||'{}')||{}; }catch(e){}
+  const ref=qs.get('external_reference')||saved.ref||'', ok=st==='ok'&&(qs.get('collection_status')||qs.get('status')||'approved')==='approved', pend=st==='pendente'||qs.get('collection_status')==='pending'||qs.get('collection_status')==='in_process';
+  const text=(saved.text||('Olá! Fiz o pedido '+ref+' pelo site.'));
+  history.replaceState(null,'',location.pathname+location.hash);
+  if(ok){ BAG={}; saveBag(); try{ localStorage.removeItem(T.key+'-pago'); }catch(e){} render(); renderBag(); }
+  $('bag').innerHTML='<div class="sheet-head"><span class="t" id="bTitle">'+(ok?'Pagamento aprovado!':pend?'Pagamento em análise':'Pagamento não concluído')+'</span><button class="x" id="bClose" type="button" aria-label="Fechar">×</button></div>'+
+    '<div class="sheet-body"><p style="margin:0">'+(ok?'Obrigado! Seu pedido <b>'+esc(ref)+'</b> foi pago e já entrou na fila de produção. Mande o pedido no WhatsApp para combinarmos os detalhes da entrega.':
+      pend?'O Mercado Pago ainda está confirmando o pagamento do pedido <b>'+esc(ref)+'</b>. Assim que aprovar, avisamos você. Se quiser, mande o pedido no WhatsApp.':
+      'O pagamento não foi concluído e nada foi cobrado. Seu pedido continua salvo aqui: você pode tentar de novo ou pedir pelo WhatsApp.')+'</p>'+
+    '<a class="btn wa lg" target="_blank" rel="noopener" href="'+esc(waLink(ok||pend?text:T.waTop))+'">'+WA_SVG+(ok||pend?'Enviar pedido pelo WhatsApp':'Falar no WhatsApp')+'</a>'+
+    (ok||pend?'':'<button class="btn plain" type="button" id="bBack">Voltar ao pedido</button>')+'</div>';
+  $('bClose').onclick=closeBag; if($('bBack')) $('bBack').onclick=renderBagSheet;
+  $('bagOv').hidden=false; document.body.style.overflow='hidden';
 }
 
 /* início */
@@ -472,7 +526,7 @@ $('bagOv').addEventListener('click',e=>{ if(e.target.id==='bagOv') closeBag(); }
 document.addEventListener('keydown',e=>{ if(e.key!=='Escape') return; if(!$('bagOv').hidden) closeBag(); else if(!$('ov').hidden) closeDetail(); });
 window.addEventListener('hashchange',fromHash);
 $('foot').innerHTML='<span>Preços atualizados em '+new Date((D.updated||'')+'T12:00:00').toLocaleDateString('pt-BR')+'. Peças feitas sob encomenda em impressão 3D, podem ter pequenas marcas das camadas.</span><a href="'+esc(waLink(T.waTop))+'" target="_blank" rel="noopener">Dúvidas? Fale com a gente no WhatsApp</a>';
-render(); renderBag(); fromHash(); loadPrices();
+render(); renderBag(); fromHash(); loadPrices(); payReturn();
 </script>
 </body>
 </html>
