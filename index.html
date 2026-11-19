@@ -225,6 +225,7 @@ const PHONE='5511954023947';
 const CHECKOUT_URL='https://catalogo-checkout.auditoredigitalsolutions.workers.dev';
 const FRETE={sp:{label:'São Paulo (SP)',cost:13}};
 const PAY=MODE==='vitrine'&&!!CHECKOUT_URL;
+const WA_ORDER=!PAY; /* com pagamento no site, a vitrine não oferece pedido pelo WhatsApp (só "Falar no WhatsApp" para dúvidas) */
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const BRL=v=>(isFinite(v)?v:0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
@@ -244,8 +245,8 @@ const T = REV ? {
   key:'pedido-revenda'
 } : {
   h1:'Decoração de Natal <span>3D</span>',
-  sub:'Peças impressas em 3D sob encomenda, feitas uma a uma com cores reais do filamento. Escolha, monte seu pedido e finalize pelo WhatsApp.',
-  how:[['Escolha','Adicione as peças e kits que quiser ao seu pedido.'],['Envie no WhatsApp','Sua lista chega pronta para combinar cores, pagamento e entrega.'],['Receba','Produção em poucos dias úteis, com pagamento por Pix.']],
+  sub:'Peças impressas em 3D sob encomenda, feitas uma a uma com cores reais do filamento. Escolha, monte seu pedido e pague com Pix ou cartão.',
+  how:[['Escolha','Adicione as peças e kits que quiser, com cor e tamanho.'],['Pague no site','Pix ou cartão em até 6x, pelo Mercado Pago. Entrega em SP por R$ 13,00.'],['Receba','Produção em poucos dias úteis e entrega no seu endereço.']],
   price:'Preço', priceLong:'Preço',
   waTop:'Olá! Vi o catálogo de decoração 3D e quero fazer um pedido.',
   orderHead:'Olá! Quero fazer este pedido pelo catálogo:',
@@ -371,7 +372,7 @@ function render(){
           (REV?'<div><small>Revenda no ML</small><b>'+(r?BRL(r.price):'—')+'</b></div>':'')+'</div></div>'+
       '</button>'+
       '<div class="card-actions">'+(vv||oo?'<button class="btn" type="button" data-open="'+esc(p.id)+'">'+esc(vv?'Escolher '+vv.many:optCta(p))+'</button>':q?stepper(p.id,q,p.name):'<button class="btn" type="button" data-add="'+esc(p.id)+'">Adicionar</button>')+
-        '<a class="btn wa icon" href="'+esc(waLink(oneText(p,q||1,vv?vv.def:oo?optDef(p):null)))+'" target="_blank" rel="noopener" aria-label="Pedir '+esc(p.name)+' pelo WhatsApp" title="Pedir pelo WhatsApp">'+WA_SVG+'</a></div>'+
+        (WA_ORDER?'<a class="btn wa icon" href="'+esc(waLink(oneText(p,q||1,vv?vv.def:oo?optDef(p):null)))+'" target="_blank" rel="noopener" aria-label="Pedir '+esc(p.name)+' pelo WhatsApp" title="Pedir pelo WhatsApp">'+WA_SVG+'</a>':'')+'</div>'+
     '</article>'; }).join('');
   $('grid').querySelectorAll('[data-open]').forEach(el=>el.onclick=()=>go(el.dataset.open));
   bindSteppers($('grid'));
@@ -407,7 +408,7 @@ function renderDetail(){
           (c.hex?'<span class="sw" style="background:'+esc(c.hex)+'"></span>':'')+'<span>'+esc(c.label)+(o.priced&&optFrom(p)?'<small>'+BRL(choicePrice(p,c.id))+'</small>':'')+'</span></button>').join('')+'</div></div>').join(''):'')+
         '<div class="buyrow">'+stepper(p.id,q||1,p.name).replace('data-dec="'+esc(p.id)+'"','data-dq="-1"').replace('data-inc="'+esc(p.id)+'"','data-dq="1"')+
           '<button class="btn" type="button" id="dAdd">'+(q?'Atualizar pedido':'Adicionar ao pedido')+'</button></div>'+
-        '<a class="btn wa lg" id="dWa" target="_blank" rel="noopener">'+WA_SVG+'Pedir pelo WhatsApp</a>'+
+        (WA_ORDER?'<a class="btn wa lg" id="dWa" target="_blank" rel="noopener">'+WA_SVG+'Pedir pelo WhatsApp</a>':'')+
         (q?'<p class="note" style="margin:0">Você já tem '+q+' no pedido. <button class="btn ghost" type="button" id="dSeeBag" style="padding:2px 6px;min-height:0">Ver pedido</button></p>':'')+
       '</div></section>'+
     (parts.length?'<section class="panel"><h3>O kit inclui</h3><div class="items">'+parts.map(x=>'<button class="item" type="button" data-open="'+esc(x.id)+'"><div class="thumb">'+img(x)+'</div><span>'+esc(x.name)+'</span>'+(priceOf(x)?'<small>'+BRL(priceOf(x))+' avulso</small>':'')+'</button>').join('')+'</div></section>':'')+
@@ -424,7 +425,7 @@ function renderDetail(){
     (p.description?'<section class="panel"><h3>Descrição</h3><p class="desc">'+esc(p.description)+'</p></section>':'')+
   '</div>';
   let dq=q||1; const qs=$('detail').querySelector('.buyrow .stepper span');
-  const upd=()=>{ qs.textContent=dq; $('dWa').href=waLink(oneText(p,dq,dn)); };
+  const upd=()=>{ qs.textContent=dq; if($('dWa')) $('dWa').href=waLink(oneText(p,dq,dn)); };
   $('detail').querySelectorAll('[data-dq]').forEach(b=>b.onclick=()=>{ dq=Math.max(1,Math.min(999,dq+(+b.dataset.dq))); upd(); });
   upd();
   $('dAdd').onclick=()=>{ setQty(key,dq); toast(dq+'× no pedido'); };
@@ -443,7 +444,7 @@ function renderDetail(){
 function renderBag(){
   const n=bagCount(), tot=bagTotal();
   $('bagbar').hidden=!n; $('fab').hidden=!!n;
-  if(n){ $('bagCount').textContent='Seu pedido · '+n+(n>1?' itens':' item'); $('bagTotal').textContent=tot?BRL(tot):'A combinar'; $('bagSendQuick').href=waLink(orderText(bagLines())); }
+  if(n){ $('bagCount').textContent='Seu pedido · '+n+(n>1?' itens':' item'); $('bagTotal').textContent=tot?BRL(tot):'A combinar'; const sq=$('bagSendQuick'); if(WA_ORDER) sq.href=waLink(orderText(bagLines())); else { sq.removeAttribute('href'); sq.removeAttribute('target'); sq.className='btn'; sq.textContent='Pagar'; sq.setAttribute('role','button'); sq.onclick=e=>{ e.preventDefault(); openBag(); }; } }
 }
 function openBag(){ renderBagSheet(); $('bagOv').hidden=false; document.body.style.overflow='hidden'; setTimeout(()=>{const x=$('bClose'); if(x) x.focus();},0); }
 function closeBag(){ $('bagOv').hidden=true; if($('ov').hidden) document.body.style.overflow=''; }
@@ -457,15 +458,15 @@ function renderBagSheet(){
      '<div class="total"><span>Total</span><span id="bTot">'+(tot?BRL(tot):'A combinar')+'</span></div>'+
      '<label class="fl">Seu nome<input id="fName" autocomplete="name" value="'+esc(EXTRA.name||'')+'"></label>'+
      (PAY?'<label class="fl">WhatsApp (com DDD)<input id="fPhone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="11 91234-5678" value="'+esc(EXTRA.phone||'')+'"></label>'+
-       '<label class="fl">Entrega<select id="fShip" class="sel">'+Object.keys(FRETE).map(k=>'<option value="'+k+'">'+esc(FRETE[k].label)+' — frete '+BRL(FRETE[k].cost)+'</option>').join('')+'<option value="outro">Outro estado — frete combinado no WhatsApp</option></select></label>'+
+       '<label class="fl">Entrega<select id="fShip" class="sel">'+Object.keys(FRETE).map(k=>'<option value="'+k+'">'+esc(FRETE[k].label)+' — frete '+BRL(FRETE[k].cost)+'</option>').join('')+(WA_ORDER?'<option value="outro">Outro estado — frete combinado no WhatsApp</option>':'')+'</select></label>'+
        '<label class="fl">CEP<input id="fCep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" value="'+esc(EXTRA.cep||'')+'"></label>'+
        '<label class="fl">Endereço (rua, número, complemento e bairro)<input id="fAddr" autocomplete="street-address" value="'+esc(EXTRA.addr||'')+'"></label>':'')+
      '<label class="fl">Cidade<input id="fCity" autocomplete="address-level2" value="'+esc(EXTRA.city||'')+'"></label>'+
      '<label class="fl">Observações (cores, data, retirada…)<textarea id="fObs" rows="3">'+esc(EXTRA.obs||'')+'</textarea></label>'+
      (PAY?'<button class="btn lg" type="button" id="bPay">Pagar com Pix ou cartão</button><p class="note" id="bPayNote" style="margin:0"></p>':'')+
-     '<a class="btn wa lg" id="bSend" target="_blank" rel="noopener">'+WA_SVG+'Enviar pedido pelo WhatsApp</a>'+
+     (WA_ORDER?'<a class="btn wa lg" id="bSend" target="_blank" rel="noopener">'+WA_SVG+'Enviar pedido pelo WhatsApp</a>':'')+
      '<button class="btn plain" type="button" id="bClear">Esvaziar pedido</button>'+
-     '<p class="note" style="margin:0">'+(PAY?'Pagando pelo site, o pedido já entra na fila de produção. Pelo WhatsApp, cores, prazo e entrega são combinados na conversa.':'O pedido só é confirmado depois da conversa no WhatsApp. Cores, prazo e entrega são combinados por lá.')+'</p>'
+     '<p class="note" style="margin:0">'+(PAY?'Entregamos no estado de São Paulo. Depois do pagamento, o pedido entra na fila de produção e falamos com você pelo WhatsApp informado.':'O pedido só é confirmado depois da conversa no WhatsApp. Cores, prazo e entrega são combinados por lá.')+'</p>'
    :'<div class="empty">Seu pedido está vazio. Toque em <b>Adicionar</b> nos produtos para montar a lista.</div>')+
   '</div>';
   $('bClose').onclick=closeBag;
@@ -476,7 +477,7 @@ function renderBagSheet(){
     if(PAY){ Object.assign(EXTRA,{phone:$('fPhone').value.trim(),cep:$('fCep').value.trim(),addr:$('fAddr').value.trim(),ship:$('fShip').value});
       const f=FRETE[EXTRA.ship]; $('bFrete').textContent=f?BRL(f.cost):'a combinar'; $('bTot').textContent=f?BRL(tot+f.cost):BRL(tot)+' + frete';
       $('bPay').hidden=!f; $('bPayNote').textContent=f?'Você vai para a página segura do Mercado Pago. Pix ou cartão em até 6x.':''; }
-    try{ localStorage.setItem(T.key+'-dados',JSON.stringify(EXTRA)); }catch(e){} $('bSend').href=waLink(orderText(bagLines(),EXTRA)); };
+    try{ localStorage.setItem(T.key+'-dados',JSON.stringify(EXTRA)); }catch(e){} if($('bSend')) $('bSend').href=waLink(orderText(bagLines(),EXTRA)); };
   ['fName','fCity','fObs','fPhone','fCep','fAddr'].forEach(i=>{ if($(i)) $(i).addEventListener('input',sync); }); if(PAY) $('fShip').addEventListener('change',sync); sync();
   if(PAY) $('bPay').onclick=pay;
   $('bClear').onclick=()=>{ if(confirm('Tirar todos os itens do pedido?')){ BAG={}; saveBag(); render(); renderBag(); renderBagSheet(); } };
@@ -495,7 +496,7 @@ async function pay(){
     if(!r.ok||!j.url) throw new Error(j.error||'Não foi possível abrir o pagamento.');
     try{ localStorage.setItem(T.key+'-pago',JSON.stringify({ref:j.ref,text:orderText(bagLines(),Object.assign({},E,{paid:j.ref}))})); }catch(e){}
     location.href=j.url;
-  }catch(e){ b.disabled=false; b.textContent='Pagar com Pix ou cartão'; note.textContent=(e.message||'Erro.')+' Se preferir, envie o pedido pelo WhatsApp.'; }
+  }catch(e){ b.disabled=false; b.textContent='Pagar com Pix ou cartão'; note.textContent=(e.message||'Erro.')+' Tente de novo em instantes.'; }
 }
 function payReturn(){
   const qs=new URLSearchParams(location.search), st=qs.get('pg'); if(!st) return;
@@ -505,11 +506,10 @@ function payReturn(){
   history.replaceState(null,'',location.pathname+location.hash);
   if(ok){ BAG={}; saveBag(); try{ localStorage.removeItem(T.key+'-pago'); }catch(e){} render(); renderBag(); }
   $('bag').innerHTML='<div class="sheet-head"><span class="t" id="bTitle">'+(ok?'Pagamento aprovado!':pend?'Pagamento em análise':'Pagamento não concluído')+'</span><button class="x" id="bClose" type="button" aria-label="Fechar">×</button></div>'+
-    '<div class="sheet-body"><p style="margin:0">'+(ok?'Obrigado! Seu pedido <b>'+esc(ref)+'</b> foi pago e já entrou na fila de produção. Mande o pedido no WhatsApp para combinarmos os detalhes da entrega.':
-      pend?'O Mercado Pago ainda está confirmando o pagamento do pedido <b>'+esc(ref)+'</b>. Assim que aprovar, avisamos você. Se quiser, mande o pedido no WhatsApp.':
-      'O pagamento não foi concluído e nada foi cobrado. Seu pedido continua salvo aqui: você pode tentar de novo ou pedir pelo WhatsApp.')+'</p>'+
-    '<a class="btn wa lg" target="_blank" rel="noopener" href="'+esc(waLink(ok||pend?text:T.waTop))+'">'+WA_SVG+(ok||pend?'Enviar pedido pelo WhatsApp':'Falar no WhatsApp')+'</a>'+
-    (ok||pend?'':'<button class="btn plain" type="button" id="bBack">Voltar ao pedido</button>')+'</div>';
+    '<div class="sheet-body"><p style="margin:0">'+(ok?'Obrigado! Seu pedido <b>'+esc(ref)+'</b> foi pago e já entrou na fila de produção. Toque no botão abaixo para nos enviar os dados da entrega pelo WhatsApp.':
+      pend?'O Mercado Pago ainda está confirmando o pagamento do pedido <b>'+esc(ref)+'</b>. Assim que aprovar, o pedido entra na fila de produção.':
+      'O pagamento não foi concluído e nada foi cobrado. Seu pedido continua salvo aqui para você tentar de novo.')+'</p>'+
+    (ok||pend?'<a class="btn wa lg" target="_blank" rel="noopener" href="'+esc(waLink(text))+'">'+WA_SVG+'Enviar dados da entrega pelo WhatsApp</a>':'<button class="btn lg" type="button" id="bBack">Tentar de novo</button>')+'</div>';
   $('bClose').onclick=closeBag; if($('bBack')) $('bBack').onclick=renderBagSheet;
   $('bagOv').hidden=false; document.body.style.overflow='hidden';
 }
