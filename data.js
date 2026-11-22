@@ -181,7 +181,6 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "vermelho, branco, verde, caramelo, marrom e preto",
                          "dims":  null,
-    "gallery":  ["img/natal-kit-bandeja.webp"],
     "image":  "img/natal-kit-bandeja-foto.jpg",
                          "createdAt":  1794444000000
                      },
