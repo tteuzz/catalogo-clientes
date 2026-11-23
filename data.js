@@ -581,9 +581,10 @@ window.CATALOGO = {
 },
 {
     "id":  "natal-casinha-vela",
+    "addon":  {"id":"vela","label":"Vela de LED","no":"Sem vela","yes":"Com vela de LED","price":4},
     "catalogId":  "natal",
     "name":  "Casinha de Natal para vela",
-    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Vela de LED tipo réchaud opcional: + R$ 4,00 (escolha ao fazer o pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF"
@@ -624,9 +625,10 @@ window.CATALOGO = {
 },
 {
     "id":  "natal-vila-velas",
+    "addon":  {"id":"vela","label":"Velas de LED","no":"Sem velas","yes":"Com velas de LED","price":4,"perPart":true},
     "catalogId":  "natal",
     "name":  "Vila de Natal para velas",
-    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Acompanha 1 vela de LED tipo réchaud por casinha (já inclusas no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Velas de LED tipo réchaud opcionais: + R$ 4,00 por casinha (escolha ao fazer o pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#F2EFE6"
@@ -766,9 +768,10 @@ window.CATALOGO = {
 },
 {
     "id":  "natal-anjo-vela",
+    "addon":  {"id":"vela","label":"Vela de LED","no":"Sem vela","yes":"Com vela de LED","price":4},
     "catalogId":  "natal",
     "name":  "Anjo luminária em malha",
-    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanhos: médio (cerca de 18,5 cm) ou pequeno (cerca de 14,5 cm)\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanhos: médio (cerca de 18,5 cm) ou pequeno (cerca de 14,5 cm)\n- Cores reais do filamento, sem pintura\n- Vela de LED tipo réchaud opcional: + R$ 4,00 (escolha ao fazer o pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "material":  "PLA",
     "colors":  [
                    "#FFFFFF",
