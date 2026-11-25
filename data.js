@@ -149,7 +149,7 @@ window.CATALOGO = {
                          "id":  "natal-jesus-trico",
                          "catalogId":  "natal",
                          "name":  "Jesus efeito tricô",
-                         "description":  "Jesus com textura de tricô, impresso em 3D em peças coloridas montadas à mão. Combina com o Papai Noel, a rena e o boneco de neve da mesma coleção em tricô, e também com presépios.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 6 cm de altura\n- Cores: marrom, pele, branco e preto (cores reais do filamento)\n- Peças coladas, firmes e leves\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+                         "description":  "Jesus sentadinho com textura de tricô: cabelo e barba marrons, túnica branca e rostinho fofo. Impresso em 3D em peças coloridas montadas à mão. Combina com o Papai Noel, a rena e o boneco de neve da mesma coleção em tricô, e também com presépios.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores: marrom, pele, branco e preto (cores reais do filamento)\n- Peças coladas, firmes e leves\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
                          "material":  "PLA",
                          "colors":  [
                                         "#AD7350",
@@ -159,8 +159,8 @@ window.CATALOGO = {
                                     ],
                          "colorText":  "marrom, pele, branco e preto",
                          "dims":  null,
-    "gallery":  ["img/natal-jesus-trico-g1.jpg", "img/natal-jesus-trico-g2.jpg", "img/natal-jesus-trico-g3.jpg", "img/natal-jesus-trico-g4.jpg"],
-    "image":  "img/natal-jesus-trico.webp",
+    "gallery":  ["img/natal-jesus-trico-g1.jpg", "img/natal-jesus-trico-g2.jpg", "img/natal-jesus-trico-g3.jpg", "img/natal-jesus-trico-g4.jpg", "img/natal-jesus-trico-g5.jpg", "img/natal-jesus-trico-g6.jpg"],
+    "image":  "img/natal-jesus-trico.jpg",
                          "createdAt":  1794333500003
                      },
                      {
